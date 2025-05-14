@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Propiedades - GRN Inversión Inmobiliaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="propiedades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-img-oval">
+                    <img src="inmobiliaria-logos/logo.png" alt="GRN Inversión Inmobiliaria Logo">
+                </div>
+                <h1>GRN Inversión Inmobiliaria</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="propiedades.html" class="active">Propiedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="citas.html">Agendar Cita</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filtros" style="padding-top: 120px;">
+            <h2>Encuentra tu Propiedad Ideal</h2>
+            <div class="filtros-container">
+                <select id="ciudad">
+                    <option value="">Selecciona una Ciudad</option>
+                    <option value="cancún">Cancún</option>
+                    <option value="mérida">Mérida</option>
+                    <option value="playa del carmen">Playa del Carmen</option>
+                    <option value="tulum">Tulum</option>
+                </select>
+                <select id="tipo">
+                    <option value="">Tipo de Inmueble</option>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="terreno">Terreno</option>
+                </select>
+                <select id="operacion">
+                    <option value="">Venta o Renta</option>
+                    <option value="venta">Venta</option>
+                    <option value="renta">Renta</option>
+                </select>
+                <select id="precio">
+                    <option value="">Rango de Precios</option>
+                    <option value="0-500000">Hasta $500,000</option>
+                    <option value="500000-1000000">$500,000 - $1,000,000</option>
+                    <option value="1000000+">Más de $1,000,000</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="propiedades-detalladas">
+            <div class="property-grid-detalle">
+                <!-- Las propiedades se cargarán dinámicamente mediante JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <div class="logo-img-oval">
+                        <img src="inmobiliaria-logos/logo.png" alt="GRN Inversión Inmobiliaria Logo">
+                    </div>
+                    <h3>GRN Inversión Inmobiliaria</h3>
+                </div>
+                <p>Tu socio confiable en bienes raíces</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="citas.html">Agendar Cita</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/grninmobiliaria" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/grn_inmobiliaria?igsh=MzBkdTVidTQ0ZzB3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/529981477653" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GRN Inversión Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPG_o62F3U-CZNDt0ORQYhkwJLz9twhYw&v=beta&callback=Function.prototype"></script>
+    <script type="module">
+        import { renderInmuebles, setupPropertyCards } from './propiedades.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            renderInmuebles();
+            setupPropertyCards();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

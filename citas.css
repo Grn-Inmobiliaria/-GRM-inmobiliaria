@@ -1,0 +1,200 @@
+/* Estilos para la página de citas */
+body {
+    zoom : 100%;
+}
+.cita-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.cita-hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.cita-hero h2 {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+    color: #fff;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.7), 0 1px 0 #222;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0.25);
+    display: inline-block;
+    padding: 0.3em 1em;
+    border-radius: 8px;
+}
+
+.cita-hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.cita-formulario {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+.cita-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cita-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+.horarios,
+.contacto-rapido {
+    margin-bottom: 2rem;
+}
+
+.horarios p,
+.contacto-rapido p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.horarios i,
+.contacto-rapido i {
+    color: var(--secondary-color);
+    width: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .cita-formulario {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cita-hero h2 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cita-hero {
+        height: 40vh;
+    }
+
+    .cita-hero h2 {
+        font-size: 2rem;
+    }
+
+    .cita-hero p {
+        font-size: 1rem;
+    }
+
+    .form-container,
+    .cita-info {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cita-hero {
+        height: 30vh;
+    }
+
+    .cita-hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .cita-formulario {
+        padding: 2rem 1rem;
+    }
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, ul, li, label, .cita-hero-content, .footer-content, .navbar, .cita-info {
+    user-select: none;
+}
+
+input, textarea, select, button {
+    user-select: text;
+} 
