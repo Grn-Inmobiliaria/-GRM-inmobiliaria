@@ -1,12 +1,12 @@
-import { propiedades } from './propiedades.js';
+import { propiedades, renderInmuebles } from './propiedades.js';
 import { getFeatureIcon, getMainFeatures } from './propiedades.js';
 console.log('Propiedades cargadas en index:', propiedades);
 
 // Variables de configuración del carrusel
 let currentIndex = 0;
-const cardWidth = 300;
+let cardWidth = 300;
 const gap = 20;
-const visibleCards = 3;
+let visibleCards = window.innerWidth <= 480 ? 1 : 3;
 
 // Función de throttling para optimizar eventos frecuentes
 function throttle(func, limit) {
@@ -33,11 +33,10 @@ function createPropertyCards() {
         
         const card = document.createElement('div');
         card.className = 'property-card';
-        
         card.innerHTML = `
             <a href="propiedades.html?id=${property.id}" class="property-link">
                 <div class="property-image">
-                    <img src="${property.imagenes[0]}" alt="${property.titulo}">
+                    <img src="${property.imagenes[0]}" alt="${property.titulo}" />
                 </div>
                 <div class="property-info">
                     <h3>${property.titulo}</h3>
@@ -50,7 +49,6 @@ function createPropertyCards() {
                 </div>
             </a>
         `;
-        
         propertyGrid.appendChild(card);
     }
 }
@@ -87,8 +85,20 @@ function updateActiveSection() {
     });
 }
 
+function updateVisibleCards() {
+    visibleCards = window.innerWidth <= 480 ? 1 : 3;
+    createPropertyCards();
+}
+
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
+    // Usar renderInmuebles para renderizar las tarjetas en el index
+    const grid = document.querySelector('.property-grid');
+    if (grid) {
+        // Mostrar solo las primeras N propiedades destacadas
+        renderInmuebles(propiedades.slice(0, 6));
+    }
+    
     // Inicializar carrusel
     createPropertyCards();
     
@@ -130,4 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         });
     });
+
+    window.addEventListener('resize', updateVisibleCards);
 });

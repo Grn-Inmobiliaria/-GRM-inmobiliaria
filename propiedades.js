@@ -24,21 +24,21 @@ export const inmuebles = [
             "Gimnasio",
             "Roof top con jacuzzi y asadores"
         ],
-        descripcion: `Adquiere este penthouse nuevo y completamente amueblado en Lagunas de Mayakoba, súper bien ubicado con una de las mejores vistas de todo el complejo.\nÚnico dueño, documentación en orden y no se ha usado, ¡Estrénalo!\n\nDistribución:\n- Cocina integral\n- Sala, Comedor con terraza\n- 2 recámaras\n- 2 baños completos\n- Área de lavado (con lava secadora)\n- Aires acondicionados\n- 1 lugar de estacionamiento\n- Elevador\n- Casa club\n- Alberca\n- Área de kayak\n- Business center\n\nAmenidades:\nTerraza, Aire acondicionado, Amueblado, Cocina integral, Elevador, Fraccionamiento privado, Seguridad 24 horas, Alberca, Área de juegos infantiles, Gimnasio, Roof top con jacuzzi y asadores.`,
+        descripcion: `¡Vive el lujo y la comodidad en este penthouse completamente amueblado en Lagunas de Mayakoba! Disfruta de espectaculares vistas, acabados de primera y amenidades exclusivas. Estrena un departamento con cocina integral, terraza, recámaras amplias, área de lavado y acceso a casa club, alberca, kayak y business center. Documentación en regla y listo para habitar. ¡No dejes pasar esta oportunidad única en Playa del Carmen!`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (1).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (2).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (3).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (4).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (5).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (6).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (7).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (8).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (9).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (10).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (11).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (12).jpg",
-            "inmobiliaria-logos/inmueble 1/inmueble 1 (13).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (1).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (2).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (3).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (4).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (5).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (6).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (7).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (8).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (9).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (10).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (11).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (12).jpg",
+            "./inmobiliaria-logos/inmueble 1/inmueble 1 (13).jpg",
            
             
         ],
@@ -70,19 +70,19 @@ export const inmuebles = [
             "En construcción",
             "5° Piso"
         ],
-        descripcion: `Invierte en este departamento de 2 habitaciones con 88 m² y amenidades de lujo, se encuentra en la torre 3 y entrega en diciembre 2026.\nEstá súper ubicado en Avenida Huayacan, nueva zona de crecimiento con la mayor plusvalía de Cancun.\nCuenta con 1 lugar de estacionamiento y está en piso 5.\nComplejo de 4 torres de 11 niveles. Torre 1 completamente vendida!!\nTenemos departamentos disponibles en:\nTorre 4 Entrega diciembre 2025\nTorre 3 Entrega en diciembre 2026\nDepartamentos desde 1 hasta 4 habitaciones e impresionantes PH de 2 niveles y alberca privada.\nLas mejores áreas comunes, estacionamiento techado, área comercial y lujosos acabados.\nMás de 25 amenidades: alberca, elevadores, lobby, gimnasio, coworking, ludoteca, spa, gamer room, juegos infantiles, asadores, pet park, jogging track, boliche, salón de eventos, snack bar, pool bar, cancha de paddle, cancha de tenis, cancha de futbol infantil, cancha de usos múltiples, skate park, junior club, senior club, garage band, cinema, seguridad, control de acceso.\nEntrega a partir de 2025 hasta 2027.\nFormas de pago:\nOpción 1: Apártalo con $50,000MN, 30% de enganche, 70% contra entrega.\nOpción 2: Apártalo con $50,000MN, 30% de enganche, 40% diferido, 30% contra entrega.`,
+        descripcion: `Invierte en un departamento moderno de 2 habitaciones con 88 m², ubicado en la zona de mayor plusvalía de Cancún. Vive rodeado de lujo y confort, con más de 25 amenidades: alberca, gimnasio, coworking, spa, boliche, canchas deportivas, áreas verdes y seguridad 24/7. Opciones de pago flexibles y entrega a partir de 2025. ¡Aprovecha la oportunidad de vivir o invertir en un desarrollo de alto nivel!`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (1).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (2).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (3).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (4).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (5).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (6).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (7).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (8).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (9).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (10).jpg",
-            "inmobiliaria-logos/inmueble 2/inmueble 2 (11).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (1).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (2).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (3).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (4).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (5).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (6).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (7).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (8).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (9).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (10).jpg",
+            "./inmobiliaria-logos/inmueble 2/inmueble 2 (11).jpg",
           
         ],
         ubicacion_link: "",
@@ -111,29 +111,29 @@ export const inmuebles = [
             "A estrenar",
             "3° Piso"
         ],
-        descripcion: `Hermoso departamento de entrega inmediata en SLS.\n2 habitaciones, family room que se puede convertir en 3era habitación, 3 baños completos, cocina italiana, cuarto de servicio con baño completo, 2 lugares de estacionamiento, vistas panorámicas, bodega, ubicado en nivel 3.\nLas mejores amenidades, calidad y lujo.\nAmenidades: Acceso a la playa, estacionamiento techado, frente al agua, muelle de carga, terraza, vista al mar, aire acondicionado, cocina integral, cuarto de servicio, elevador, fraccionamiento privado, hidroneumático, oficina, seguridad 24 horas, alberca, área de juegos infantiles, cancha de pádel, cancha de tenis, cine, gimnasio, jacuzzi, salón de usos múltiples.`,
+        descripcion: `Exclusivo departamento en SLS Harbour, Puerto Cancún. 2 recámaras, family room convertible, cocina italiana, cuarto de servicio, 2 estacionamientos y vistas panorámicas. Disfruta de amenidades premium: acceso a playa, alberca, gimnasio, cine, canchas deportivas y seguridad total. Entrega inmediata y lujo inigualable en cada detalle.`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (1).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (2).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (3).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (4).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (5).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (6).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (7).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (8).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (9).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (10).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (11).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (12).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (13).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (14).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (15).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (16).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (17).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (18).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (19).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (20).jpg",
-            "inmobiliaria-logos/inmueble 3/inmueble 3 (21).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (1).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (2).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (3).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (4).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (5).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (6).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (7).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (8).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (9).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (10).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (11).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (12).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (13).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (14).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (15).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (16).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (17).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (18).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (19).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (20).jpg",
+            "./inmobiliaria-logos/inmueble 3/inmueble 3 (21).jpg",
        
         ],
         ubicacion_link: "",
@@ -162,18 +162,18 @@ export const inmuebles = [
             "En construcción",
             "8° Piso"
         ],
-        descripcion: `Invierte en uno de estos departamentos dentro de la Zona Cumbres en Cancún sobre la Av. Luis Donaldo Colosio, +15 amenidades tipo resort y una gama de servicios pensados en facilitar la administración de rentas Airbnb para los inversionistas del proyecto, las torres de departamentos más altas de la zona con vistas hacia la laguna de Nichupté.\nComplejo de 6 torres con 115 unidades en 22 niveles con vistas panorámicas espectaculares!! Y centro comercial a solo unos pasos para tu mayor comodidad.\nDepartamentos de 1,2 y 3 habitaciones con lock off. Entrega en febrero 2026.\nAmenidades: Piscina y piscina para niños, asoleadero, cabañas, parrillas, patio de juegos, bar terraza, cine/multifuncional, coworking, gimnasio, sala de juego, cuarto de juegos, bar deportivo, opción a adquirir tu departamento amueblado y decorado (llave en mano) o con línea blanca, paquetes disponibles 6 meses antes de la entrega.\nEsquemas de pago con apartado $20,000. Opción 1: Enganche 50%, construcción 40%, entrega 10%, descuento: 12%. Opción 2: Enganche 25%, diferido 65%, entrega 10%, descuento -9%. Opción 3: Enganche 10%, diferido 20%, entrega 70%, descuento 0%. Opción 4: Enganche 30%, entrega 70%, descuento 3%.`,
+        descripcion: `Invierte en la zona más exclusiva de Cancún: Zona Cumbres. Departamentos de 1, 2 y 3 habitaciones con vistas espectaculares, amenidades tipo resort y servicios ideales para rentas Airbnb. Disfruta de piscina, gimnasio, coworking, cine, bar, áreas infantiles y más. Entrega en 2026 y opciones de pago con descuentos especiales. ¡Tu mejor inversión está aquí!`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (1).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (2).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (3).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (4).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (5).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (6).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (7).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (8).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (9).jpg",
-            "inmobiliaria-logos/inmueble 4/inmueble 4 (10).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (1).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (2).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (3).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (4).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (5).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (6).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (7).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (8).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (9).jpg",
+            "./inmobiliaria-logos/inmueble 4/inmueble 4 (10).jpg",
         ],
         ubicacion_link: "",
         estado: "Venta",
@@ -200,27 +200,27 @@ export const inmuebles = [
             "59 m²",
             "En construcción"
         ],
-        descripcion: `Invierte en este moderno y súper ubicado complejo de departamentos de 1 y 2 habitaciones con vistas a la laguna y zona hotelera, con más de 20 amenidades y muy cerca de la universidad Anáhuac, zona hotelera y aeropuerto de Cancún.\nAmenidades: Alberca familiar, para adultos y chapoteadero, pista para correr, ciclo vía con bicicletas, cine para 20 personas, coworking, salas de juntas, sala de juegos, estudio de grabación, espacios para fotografías icónicas, área infantil interior y otra exterior, gimnasio interior y otro exterior, área de yoga y tinas de hielo, canchas de pádel, cancha de basquetbol, áreas verdes, elevadores, lobby, mirador terraza, salón de eventos, área de asadores, pet park, zona de hamacas.\nSe entregan en diciembre de 2026.\nFormas de pago: Apartado con $100,000.00, enganche diferido a la entrega 30%-70%, 30%-40%-30%, 50%-50%, 70%-30%, 90%-10%. Con descuentos desde el 3 hasta el 10% según el plan que se elige.`,
+        descripcion: `Modernos departamentos con vistas a la laguna y zona hotelera, más de 20 amenidades de lujo y ubicación privilegiada cerca de la universidad Anáhuac y aeropuerto de Cancún. Disfruta de albercas, gimnasio, coworking, áreas verdes, canchas deportivas y espacios para toda la familia. Entrega en diciembre 2026 y planes de pago flexibles con atractivos descuentos.`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (1).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (2).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (3).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (4).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (5).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (6).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (7).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (8).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (9).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (10).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (11).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (12).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (13).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (14).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (15).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (16).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (17).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (18).jpg",
-            "inmobiliaria-logos/inmueble 5/inmueble 5 (19).jpg"
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (1).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (2).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (3).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (4).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (5).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (6).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (7).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (8).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (9).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (10).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (11).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (12).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (13).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (14).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (15).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (16).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (17).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (18).jpg",
+            "./inmobiliaria-logos/inmueble 5/inmueble 5 (19).jpg"
 
             
         ],
@@ -250,25 +250,25 @@ export const inmuebles = [
             "En construcción",
             "18° Piso"
         ],
-        descripcion: `Invierte en uno de estos departamentos de 1, 2 o 3 habitaciones, con increíbles vistas de la laguna Nichupté y Zona Hotelera, ubicación estratégica en blvd. Colosio, cerca de todo!!!\nComplejo de 4 torres de 21 pisos cada una y más de 20 amenidades de lujo para disfrutar o sacar el máximo provecho de tu inversión!!\nAmenidades: Albercas (familiar, adultos y niños), gimnasio, golf virtual, snack bar, ciclovía, tenis, trampolines, balcón, estacionamiento techado, vista al agua, cocina integral, elevador, fraccionamiento privado, hidroneumático, seguridad 24 horas, mascotas permitidas, alberca, área de juegos infantiles, cancha de pádel, cancha de tenis, fogatero, gimnasio, jacuzzi, salón de usos múltiples, lobby, jacuzzis, zona TRX, boliche, business center, minigolf, padel, juegos infantiles, concierge, pool bar, spa, bar sky view, streaming room, skate park, futbol infantil, asadores, área comercial, asoleaderos, ludoteca, salón de eventos, junior club, pet park, cancha multiusos, área de picnic, salón de fiestas infantil.\nEntrega a finales de 2027.`,
+        descripcion: `Departamentos de 1, 2 o 3 habitaciones con vistas increíbles a la laguna Nichupté y Zona Hotelera. Complejo de 4 torres con más de 20 amenidades: albercas, gimnasio, golf virtual, ciclovía, canchas, spa, boliche, business center, área comercial y más. Ubicación estratégica en Blvd. Colosio, entrega a finales de 2027. ¡Invierte en calidad de vida y plusvalía!`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (1).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (2).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (3).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (4).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (5).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (6).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (7).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (8).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (9).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (10).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (11).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (12).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (13).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (14).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (15).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (16).jpg",
-            "inmobiliaria-logos/inmueble 6/inmueble 6 (17).jpg"
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (1).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (2).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (3).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (4).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (5).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (6).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (7).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (8).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (9).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (10).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (11).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (12).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (13).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (14).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (15).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (16).jpg",
+            "./inmobiliaria-logos/inmueble 6/inmueble 6 (17).jpg"
         ],
         ubicacion_link: "",
         estado: "Venta",
@@ -298,22 +298,22 @@ export const inmuebles = [
             "En construcción",
             "1° Piso"
         ],
-        descripcion: `Disfruta de este magnífico desarrollo con excelente ubicación en Cancún, sobre avenida Colosio.\nDistribución del modelo Ohana en Planta baja: 57 m², vista norte, 1 habitación, 1.5 baños, sala-comedor, cocina integral, zona de lavandería, terraza.\nÚLTIMOS DEPARTAMENTOS DESDE 50M² HASTA 79 M², 1 Y 2 HABITACIONES.\nAMENIDADES: Alberca, áreas verdes, walking trail, estacionamiento techado, jardín, riego por aspersión, terraza, cocina integral, elevador, fraccionamiento privado, hidroneumático, seguridad 24 horas, mascotas permitidas, alberca, área de juegos infantiles, cancha de pádel, cancha de tenis, fogatero, fitness club, yoga deck, pista de jogging, canchas de padel, magic park, BBQ zone, pet park, spa y más...\nEntrega en Abril 2025 nivel 1 y 2. Etapa final de 1ra fase en octubre de 2025.`,
+        descripcion: `Desarrollo residencial con excelente ubicación en Cancún, sobre avenida Colosio. Departamentos de 1 y 2 habitaciones, modelos desde 50 m², con terraza, cocina integral y amenidades de primer nivel: alberca, áreas verdes, fitness club, yoga deck, BBQ zone, pet park y más. Entrega en 2025. ¡Vive o invierte en un entorno moderno y seguro!`,
         imagenes: [
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (1).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (2).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (3).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (4).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (5).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (6).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (7).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (8).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (9).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (10).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (11).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (12).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (13).jpg",
-            "inmobiliaria-logos/inmueble 7/inmueble 7 (14).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (1).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (2).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (3).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (4).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (5).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (6).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (7).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (8).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (9).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (10).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (11).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (12).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (13).jpg",
+            "./inmobiliaria-logos/inmueble 7/inmueble 7 (14).jpg",
       
         ],
         ubicacion_link: "",
@@ -512,10 +512,6 @@ export function openPropertyModal(idx) {
                         `).join('')}
                     </div>
                 </div>
-                <div style="text-align:center; margin-top: 10px; display: flex; justify-content: center; gap: 16px;">
-                    ${prop.ubicacion_link ? `<a href="${prop.ubicacion_link}" target="_blank" rel="noopener" class="contact-button" style="background:#222;">Ver ubicación en Google Maps</a>` : ''}
-                    <a href="https://wa.me/529981477653?text=Estoy%20interesado%20en%20${encodeURIComponent(prop.titulo)}%20-%20Contacto:%20mnieto@grn.com.mx" class="contact-button" style="background:#3498db;"><i class="fab fa-whatsapp"></i> Contactar</a>
-                </div>
             </div>
             <div class="modal-right">
                 <div class="modal-info">
@@ -528,6 +524,7 @@ export function openPropertyModal(idx) {
                             </button>
                         </div>
                         <p class="location"><i class="fas fa-map-marker-alt"></i> ${prop.ubicacion}</p>
+                        <p class="status">Estado: ${prop.estado} - ${prop.disponibilidad}</p>
                         <p class="description">${prop.descripcion}</p>
                         <div class="features-list">
                             ${getAllFeatures(prop.caracteristicas)}
@@ -554,6 +551,10 @@ export function openPropertyModal(idx) {
                             </div>
                             ${prop.documentacion.antiguedad ? `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: ${prop.documentacion.antiguedad}</span></div>` : ''}
                         ` : '<p>Información de documentación no disponible</p>'}
+                    </div>
+                    <div style="text-align:center; margin: 18px 0 0 0; display: flex; flex-direction: column; gap: 8px;">
+                        ${prop.ubicacion_link ? `<a href='${prop.ubicacion_link}' target='_blank' rel='noopener' class='contact-button' style='background:#222;'>Ver ubicación en Google Maps</a>` : ''}
+                        <a href='https://wa.me/529981477653?text=Estoy%20interesado%20en%20${encodeURIComponent(prop.titulo)}%20-%20Contacto:%20mnieto@grn.com.mx' class='contact-button' style='background:#3498db;'><i class='fab fa-whatsapp'></i> Contactar</a>
                     </div>
                 </div>
             </div>
