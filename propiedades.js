@@ -26,21 +26,19 @@ export const inmuebles = [
         ],
         descripcion: `¡Vive el lujo y la comodidad en este penthouse completamente amueblado en Lagunas de Mayakoba! Disfruta de espectaculares vistas, acabados de primera y amenidades exclusivas. Estrena un departamento con cocina integral, terraza, recámaras amplias, área de lavado y acceso a casa club, alberca, kayak y business center. Documentación en regla y listo para habitar. ¡No dejes pasar esta oportunidad única en Playa del Carmen!`,
         imagenes: [
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (1).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (2).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (3).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (4).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (5).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (6).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (7).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (8).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (9).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (10).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (11).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (12).jpg",
-            "./inmobiliaria-logos/inmueble 1/inmueble 1 (13).jpg",
-           
-            
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (1).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (2).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (3).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (4).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (5).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (6).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (7).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (8).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (9).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (10).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (11).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (12).jpg",
+            "inmobiliaria-logos/inmueble 1/inmueble 1 (13).jpg"
         ],
         estado: "Venta",
         disponibilidad: "Disponible",
@@ -370,9 +368,10 @@ export function renderInmuebles(lista = inmuebles) {
         grid.innerHTML = '<p style="grid-column: 1/-1; text-align:center;">No se encontraron inmuebles con esos filtros.</p>';
         return;
     }
-    lista.forEach((prop, idx) => {
+    lista.forEach((prop) => {
         const card = document.createElement('div');
         card.className = 'property-card';
+        card.setAttribute('data-id', prop.id);
         card.innerHTML = `
             <div class="property-image">
                 <img src="${prop.imagenes[0]}" alt="${prop.titulo}" />
@@ -387,10 +386,7 @@ export function renderInmuebles(lista = inmuebles) {
                 </div>
             </div>
         `;
-        
-        // Agregar evento de clic a la tarjeta
-        card.addEventListener('click', () => openPropertyModal(idx));
-        
+        card.addEventListener('click', () => openPropertyModal(prop.id));
         grid.appendChild(card);
     });
 
@@ -486,13 +482,13 @@ export function convertMXNtoUSD(mxnAmount) {
 }
 
 // Mostrar detalles de la propiedad en modal
-export function openPropertyModal(idx) {
+export function openPropertyModal(id) {
     const existingModal = document.querySelector('.property-modal');
     if (existingModal) {
         existingModal.remove();
     }
-
-    const prop = inmuebles[idx];
+    const prop = inmuebles.find(p => p.id === id);
+    if (!prop) return;
     const modal = document.createElement('div');
     modal.className = 'property-modal';
     modal.innerHTML = `
@@ -714,8 +710,11 @@ export function setupPropertyCards() {
 
     // Configurar eventos de las tarjetas de propiedades
     const propertyCards = document.querySelectorAll('.property-card');
-    propertyCards.forEach((card, index) => {
-        card.addEventListener('click', () => openPropertyModal(index));
+    propertyCards.forEach((card) => {
+        const propertyId = parseInt(card.getAttribute('data-id'));
+        if (propertyId) {
+            card.addEventListener('click', () => openPropertyModal(propertyId));
+        }
     });
 }
 

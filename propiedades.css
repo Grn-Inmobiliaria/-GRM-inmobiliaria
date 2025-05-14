@@ -34,20 +34,14 @@ body {
 
 /* Estilos para las tarjetas de propiedades */
 .property-card {
-    flex: 0 0 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    min-width: 300px;
-    height: auto;
-    min-height: 600px;
-    background: #fff;
+    width: 100%;
+    min-height: 400px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1.7px solid #8d8d8d;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+    border: 1px solid #e0e0e0;
 }
 
 .property-image {
@@ -172,11 +166,10 @@ body {
 /* Estilos para la vista detallada */
 .property-grid-detalle {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 900px); /* Ajustado al nuevo ancho */
-    justify-content: center;
-    gap: 3rem; /* Aumentado el espacio entre tarjetas */
-    padding: 1.5rem;
-    max-width: 1400px; /* Aumentado el ancho máximo del contenedor */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -296,10 +289,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .property-grid-detalle {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
     .property-card {
-        flex: 0 0 calc(100% - 20px);
-        max-width: calc(100% - 20px);
-        min-height: 550px;
+        min-height: 350px;
     }
     
     .property-info h3 {
