@@ -698,10 +698,14 @@ export function getFeatureIcon(feature) {
 // Configurar los eventos de las tarjetas de propiedades
 export function setupPropertyCards() {
     // Configurar eventos de filtros
-    document.getElementById('ciudad').addEventListener('change', filtrarInmuebles);
-    document.getElementById('tipo').addEventListener('change', filtrarInmuebles);
-    document.getElementById('operacion').addEventListener('change', filtrarInmuebles);
-    document.getElementById('precio').addEventListener('change', filtrarInmuebles);
+    const ciudad = document.getElementById('ciudad');
+    if (ciudad) ciudad.addEventListener('change', filtrarInmuebles);
+    const tipo = document.getElementById('tipo');
+    if (tipo) tipo.addEventListener('change', filtrarInmuebles);
+    const operacion = document.getElementById('operacion');
+    if (operacion) operacion.addEventListener('change', filtrarInmuebles);
+    const precio = document.getElementById('precio');
+    if (precio) precio.addEventListener('change', filtrarInmuebles);
 
     // Configurar eventos de las tarjetas de propiedades
     const propertyCards = document.querySelectorAll('.property-card');
