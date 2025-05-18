@@ -444,9 +444,9 @@ function filtrarInmuebles() {
         if (filtros.precio) {
             const precioInmueble = extractPriceValue(inmueble.precio);
             const [min, max] = filtros.precio.split('-').map(Number);
-            if (max) {
+            if (!isNaN(min) && !isNaN(max)) {
                 cumplePrecio = precioInmueble >= min && precioInmueble <= max;
-            } else {
+            } else if (!isNaN(min)) {
                 cumplePrecio = precioInmueble >= min;
             }
         }
