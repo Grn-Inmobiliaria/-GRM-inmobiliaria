@@ -341,6 +341,13 @@ export const inmuebles = [
    
 ];
 
+// --- Normaliza estado a 'Preventa' si el título contiene 'preventa', 'pre venta' o 'pre-venta' ---
+inmuebles.forEach(inmueble => {
+    if (inmueble.titulo && /pre\s*-?\s*venta/i.test(inmueble.titulo)) {
+        inmueble.estado = 'Preventa';
+    }
+});
+
 // Exportar las propiedades para su uso en otros archivos
 export const propiedades = inmuebles;
 
@@ -350,8 +357,19 @@ function getPropertyIdFromUrl() {
     return params.get('id');
 }
 
-// Función principal para mostrar las propiedades
+// --- Filtro de moneda global ---
+let monedaActual = 'MXN';
+
+function actualizarMoneda() {
+    const selectMoneda = document.getElementById('moneda');
+    if (selectMoneda) {
+        monedaActual = selectMoneda.value;
+    }
+}
+
+// Modifica renderInmuebles para mostrar precios en la moneda seleccionada
 export function renderInmuebles(lista = inmuebles) {
+    actualizarMoneda();
     const grid = document.querySelector('.property-grid-detalle');
     if (!grid) return;
     const propertyId = getPropertyIdFromUrl();
@@ -367,13 +385,18 @@ export function renderInmuebles(lista = inmuebles) {
         const card = document.createElement('div');
         card.className = 'property-card';
         card.setAttribute('data-id', prop.id);
+        let precioMostrar = prop.precio;
+        if (monedaActual === 'USD') {
+            const valor = extractPriceValue(prop.precio);
+            precioMostrar = formatPrice(convertMXNtoUSD(valor), 'USD');
+        }
         card.innerHTML = `
             <div class="property-image">
                 <img src="${prop.imagenes[0]}" alt="${prop.titulo}" />
             </div>
             <div class="property-info">
                 <h3>${prop.titulo}</h3>
-                <p class="price">${prop.precio}</p>
+                <p class="price">${precioMostrar}</p>
                 <p class="location"><i class="fas fa-map-marker-alt"></i> ${prop.ubicacion}</p>
                 <p class="status">Estado: ${prop.estado} - ${prop.disponibilidad}</p>
                 <div class="features-list">
@@ -384,7 +407,6 @@ export function renderInmuebles(lista = inmuebles) {
         card.addEventListener('click', () => openPropertyModal(prop.id));
         grid.appendChild(card);
     });
-
     // Configurar pointer cursor para las tarjetas
     const cards = document.querySelectorAll('.property-card');
     cards.forEach(card => {
@@ -432,14 +454,19 @@ function getFiltros() {
     };
 }
 
-// Aplicar filtros a las propiedades
+// --- Filtro de preventa en operación ---
 function filtrarInmuebles() {
+    actualizarMoneda();
     const filtros = getFiltros();
-    const inmueblesFiltrados = inmuebles.filter(inmueble => {
+    let inmueblesFiltrados = inmuebles.filter(inmueble => {
         const cumpleCiudad = !filtros.ciudad || inmueble.ubicacion.toLowerCase().includes(filtros.ciudad);
         const cumpleTipo = !filtros.tipo || inmueble.titulo.toLowerCase().includes(filtros.tipo);
-        const cumpleOperacion = !filtros.operacion || inmueble.estado.toLowerCase() === filtros.operacion;
-        
+        let cumpleOperacion = true;
+        if (filtros.operacion === 'preventa') {
+            cumpleOperacion = inmueble.estado.toLowerCase() === 'preventa';
+        } else if (filtros.operacion) {
+            cumpleOperacion = inmueble.estado.toLowerCase() === filtros.operacion;
+        }
         let cumplePrecio = true;
         if (filtros.precio) {
             const precioInmueble = extractPriceValue(inmueble.precio);
@@ -450,10 +477,8 @@ function filtrarInmuebles() {
                 cumplePrecio = precioInmueble >= min;
             }
         }
-
         return cumpleCiudad && cumpleTipo && cumpleOperacion && cumplePrecio;
     });
-
     renderInmuebles(inmueblesFiltrados);
 }
 
@@ -484,6 +509,34 @@ export function openPropertyModal(id) {
     }
     const prop = inmuebles.find(p => p.id === id);
     if (!prop) return;
+
+    // CLAVES PARA AGRUPAR CARACTERÍSTICAS
+    const basicasKeys = ['habitacion', 'baño', 'estacionamiento', 'piso', 'mantenimiento'];
+    const antiguedadKeys = ['antigüedad', 'antiguedad'];
+
+    // Normaliza tildes y mayúsculas/minúsculas
+    function normalize(str) {
+        return str
+            .toLowerCase()
+            .normalize('NFD').replace(/[0-\u036f]/g, '');
+    }
+
+    // Filtrar básicas
+    const basicas = prop.caracteristicas.filter(f => {
+        const fNorm = normalize(f);
+        return basicasKeys.some(k => fNorm.includes(normalize(k)));
+    });
+    // Filtrar antigüedad/construcción
+    const antiguedadCarac = prop.caracteristicas.find(f => {
+        const fNorm = normalize(f);
+        return antiguedadKeys.some(k => fNorm.includes(normalize(k)));
+    });
+    // Adicionales: solo las que no son básicas ni antigüedad/construcción
+    const adicionales = prop.caracteristicas.filter(f => {
+        const fNorm = normalize(f);
+        return !basicasKeys.some(k => fNorm.includes(normalize(k))) && !antiguedadKeys.some(k => fNorm.includes(normalize(k)));
+    });
+
     const modal = document.createElement('div');
     modal.className = 'property-modal';
     modal.innerHTML = `
@@ -497,54 +550,85 @@ export function openPropertyModal(id) {
                     `).join('')}
                     <button class="carousel-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
                     <button class="carousel-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    <div class="carousel-indicators">
-                        ${prop.imagenes.map((_, i) => `
-                            <span class="indicator ${i === 0 ? 'active' : ''}" data-index="${i}"></span>
+                </div>
+                <div class="thumbnails-bar">
+                    <button class="thumbs-arrow left" aria-label="Miniaturas anteriores">&#8592;</button>
+                    <div class="thumbnails-wrapper">
+                        <div class="thumbnails">
+                            ${prop.imagenes.map((img, i) => `
+                                <img src="${img}" class="thumbnail${i === 0 ? ' selected' : ''}" data-index="${i}" alt="Miniatura ${i+1}">
                         `).join('')}
                     </div>
+                    </div>
+                    <button class="thumbs-arrow right" aria-label="Miniaturas siguientes">&#8594;</button>
                 </div>
             </div>
             <div class="modal-right">
                 <div class="modal-info">
-                    <div class="info-principal">
+                    <div class="info-section principal">
                         <h3>${prop.titulo}</h3>
                         <div class="price-container">
-                            <p class="price" data-price="${extractPriceValue(prop.precio)}">${prop.precio}</p>
-                            <button class="convert-currency-btn" title="Convertir a USD">
-                                <i class="fas fa-exchange-alt"></i> USD
-                            </button>
+                            <p class="price" data-price="${extractPriceValue(prop.precio)}">${monedaActual === 'USD' ? formatPrice(convertMXNtoUSD(extractPriceValue(prop.precio)), 'USD') : prop.precio}</p>
                         </div>
                         <p class="location"><i class="fas fa-map-marker-alt"></i> ${prop.ubicacion}</p>
-                        <p class="status">Estado: ${prop.estado} - ${prop.disponibilidad}</p>
+                    </div>
+                    <div class="info-section estado">
+                        <span class="status">Estado: ${prop.estado} - ${prop.disponibilidad}</span>
+                    </div>
+                    <div class="info-section descripcion">
+                        <h4>DESCRIPCIÓN</h4>
                         <p class="description">${prop.descripcion}</p>
-                        <div class="features-list">
-                            ${getAllFeatures(prop.caracteristicas)}
+                        </div>
+                    <div class="info-section basica">
+                        <h4>INFORMACIÓN BÁSICA</h4>
+                        <div class="info-list">
+                            ${basicas.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
+                    </div>
+                    </div>
+                    <div class="info-section superficie">
+                        <h4>SUPERFICIE</h4>
+                        <div class="info-list">
+                            <span><i class="fas fa-ruler-combined"></i> ${prop.metrosCuadrados} m²</span>
                         </div>
                     </div>
-                    <div class="info-documentacion">
-                        <h4><i class="fas fa-file-alt"></i> Estado de la Documentación</h4>
-                        ${prop.documentacion ? `
-                            <div class="doc-item ${prop.documentacion.escrituras === 'En orden' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-file-contract"></i>
-                                <span>Escrituras: ${prop.documentacion.escrituras}</span>
-                            </div>
-                            <div class="doc-item ${prop.documentacion.predial === 'Al corriente' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-receipt"></i>
-                                <span>Predial: ${prop.documentacion.predial}</span>
-                            </div>
-                            <div class="doc-item ${prop.documentacion.servicios === 'Todos los servicios' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-plug"></i>
-                                <span>Servicios: ${prop.documentacion.servicios}</span>
-                            </div>
-                            <div class="doc-item ${prop.documentacion.gravamen === 'Libre de gravamen' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-unlock"></i>
-                                <span>Gravamen: ${prop.documentacion.gravamen}</span>
-                            </div>
-                            ${prop.documentacion.antiguedad ? `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: ${prop.documentacion.antiguedad}</span></div>` : ''}
-                        ` : '<p>Información de documentación no disponible</p>'}
+                    <div class="info-section espacios-adicionales">
+                        <h4>ESPACIOS Y ADICIONALES</h4>
+                        <div class="info-list">
+                            ${adicionales.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
+                        </div>
                     </div>
-                    <div style="text-align:center; margin: 18px 0 0 0; display: flex; flex-direction: column; gap: 8px;">
-                        ${prop.ubicacion_link ? `<a href='${prop.ubicacion_link}' target='_blank' rel='noopener' class='contact-button' style='background:#222;'>Ver ubicación en Google Maps</a>` : ''}
+                    <div class="info-section documentacion">
+                        <h4><i class="fas fa-file-alt"></i> ESTADO DE LA DOCUMENTACIÓN</h4>
+                        ${(() => {
+                            let doc = prop.documentacion;
+                            let antiguedadHtml = '';
+                            if (doc && doc.antiguedad) {
+                                antiguedadHtml = `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: ${doc.antiguedad}</span></div>`;
+                            } else if (antiguedadCarac) {
+                                antiguedadHtml = `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: En construcción</span></div>`;
+                            }
+                            return doc ? `
+                                <div class="doc-item ${doc.escrituras === 'En orden' ? 'completo' : 'pendiente'}">
+                                <i class="fas fa-file-contract"></i>
+                                    <span>Escrituras: ${doc.escrituras}</span>
+                            </div>
+                                <div class="doc-item ${doc.predial === 'Al corriente' ? 'completo' : 'pendiente'}">
+                                <i class="fas fa-receipt"></i>
+                                    <span>Predial: ${doc.predial}</span>
+                            </div>
+                                <div class="doc-item ${doc.servicios === 'Todos los servicios' ? 'completo' : 'pendiente'}">
+                                <i class="fas fa-plug"></i>
+                                    <span>Servicios: ${doc.servicios}</span>
+                            </div>
+                                <div class="doc-item ${doc.gravamen === 'Libre de gravamen' ? 'completo' : 'pendiente'}">
+                                <i class="fas fa-unlock"></i>
+                                    <span>Gravamen: ${doc.gravamen}</span>
+                            </div>
+                                ${antiguedadHtml}
+                            ` : '<p>Información de documentación no disponible</p>';
+                        })()}
+                    </div>
+                    <div class="info-section contacto" style="text-align:center; margin: 18px 0 0 0; display: flex; flex-direction: column; gap: 8px;">
                         <a href='https://wa.me/529981477653?text=Estoy%20interesado%20en%20${encodeURIComponent(prop.titulo)}%20-%20Contacto:%20mnieto@grn.com.mx' class='contact-button' style='background:#3498db;'><i class='fab fa-whatsapp'></i> Contactar</a>
                     </div>
                 </div>
@@ -557,47 +641,56 @@ export function openPropertyModal(id) {
     
     // Forzar un reflow para que la transición funcione
     modal.offsetHeight;
-    // Agregar la clase active inmediatamente después de agregar el modal al DOM
     requestAnimationFrame(() => {
         modal.classList.add('active');
     });
 
-    // Añadir funcionalidad al botón de conversión
-    const convertBtn = modal.querySelector('.convert-currency-btn');
-    const priceElement = modal.querySelector('.price');
-    let isUSD = false;
-
-    convertBtn.addEventListener('click', () => {
-        const priceValue = parseFloat(priceElement.dataset.price);
-        if (!isUSD) {
-            // Convertir a USD
-            const usdPrice = convertMXNtoUSD(priceValue);
-            priceElement.textContent = formatPrice(usdPrice, 'USD');
-            convertBtn.innerHTML = '<i class="fas fa-exchange-alt"></i> MXN ';
-        } else {
-            // Volver a MXN
-            priceElement.textContent = formatPrice(priceValue, 'MXN');
-            convertBtn.innerHTML = '<i class="fas fa-exchange-alt"></i> USD';
-        }
-        isUSD = !isUSD;
-    });
-
-    // Variables para el carrusel
+    // Carrusel principal
     let currentIndex = 0;
     const carouselItems = modal.querySelectorAll('.carousel-item');
-    const indicators = modal.querySelectorAll('.indicator');
     const prevButton = modal.querySelector('.carousel-prev');
     const nextButton = modal.querySelector('.carousel-next');
+    // Miniaturas
+    const thumbnails = modal.querySelectorAll('.thumbnail');
+    const thumbnailsWrapper = modal.querySelector('.thumbnails-wrapper');
+    const thumbsArrowLeft = modal.querySelector('.thumbs-arrow.left');
+    const thumbsArrowRight = modal.querySelector('.thumbs-arrow.right');
 
     function showSlide(index) {
         carouselItems.forEach(item => item.classList.remove('active'));
-        indicators.forEach(ind => ind.classList.remove('active'));
+        if (thumbnails.length) thumbnails.forEach(t => t.classList.remove('selected'));
         carouselItems[index].classList.add('active');
-        indicators[index].classList.add('active');
+        if (thumbnails.length) thumbnails[index].classList.add('selected');
         currentIndex = index;
+        // Scroll automático de miniaturas si es necesario
+        if (thumbnails.length) {
+            const thumb = thumbnails[index];
+            const wrapperRect = thumbnailsWrapper.getBoundingClientRect();
+            const thumbRect = thumb.getBoundingClientRect();
+            if (thumbRect.left < wrapperRect.left) {
+                thumbnailsWrapper.scrollLeft -= (wrapperRect.left - thumbRect.left + 10);
+            } else if (thumbRect.right > wrapperRect.right) {
+                thumbnailsWrapper.scrollLeft += (thumbRect.right - wrapperRect.right + 10);
+            }
+        }
     }
 
-    // Event listeners para navegación
+    thumbnails.forEach((thumb, idx) => {
+        thumb.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showSlide(idx);
+        });
+    });
+
+    thumbsArrowLeft.addEventListener('click', (e) => {
+        e.stopPropagation();
+        thumbnailsWrapper.scrollLeft -= 120;
+    });
+    thumbsArrowRight.addEventListener('click', (e) => {
+        e.stopPropagation();
+        thumbnailsWrapper.scrollLeft += 120;
+    });
+
     prevButton.addEventListener('click', (e) => {
         e.stopPropagation();
         const newIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
@@ -608,13 +701,6 @@ export function openPropertyModal(id) {
         e.stopPropagation();
         const newIndex = (currentIndex + 1) % carouselItems.length;
         showSlide(newIndex);
-    });
-
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showSlide(index);
-        });
     });
 
     // Cerrar modal al hacer clic fuera
@@ -644,7 +730,6 @@ export function openPropertyModal(id) {
             showSlide(newIndex);
         }
     }
-
     document.addEventListener('keydown', handleKeyPress);
 }
 
@@ -662,7 +747,9 @@ function getAllFeatures(caracteristicas) {
 export function getFeatureIcon(feature) {
     const icons = {
         'Habitaciones': '<i class="fas fa-bed"></i>',
+        'Habitación': '<i class="fas fa-bed"></i>',
         'Baños': '<i class="fas fa-bath"></i>',
+        'Baño': '<i class="fas fa-bath"></i>',
         'Piscina': '<i class="fas fa-swimmer"></i>',
         'Jardín': '<i class="fas fa-tree"></i>',
         'Terraza': '<i class="fas fa-umbrella-beach"></i>',
@@ -678,21 +765,48 @@ export function getFeatureIcon(feature) {
         'Gimnasio': '<i class="fas fa-dumbbell"></i>',
         'Muelle Privado': '<i class="fas fa-anchor"></i>',
         'Cenote Privado': '<i class="fas fa-water"></i>',
-        'm²': '<i class="fas fa-ruler-combined"></i>'
+        'm²': '<i class="fas fa-ruler-combined"></i>',
+        'Amueblado': '<i class="fas fa-couch"></i>',
+        'Aire acondicionado': '<i class="fas fa-snowflake"></i>',
+        'Elevador': '<i class="fas fa-elevator"></i>',
+        'Fraccionamiento privado': '<i class="fas fa-city"></i>',
+        'Mantenimiento': '<i class="fas fa-coins"></i>',
+        'Piso': '<i class="fas fa-building"></i>',
+        'Seguridad 24 horas': '<i class="fas fa-shield-alt"></i>',
+        'Área de juegos infantiles': '<i class="fas fa-child"></i>',
+        'Roof top con jacuzzi y asadores': '<i class="fas fa-hot-tub"></i>',
+        'Cocina integral': '<i class="fas fa-utensils"></i>',
+        'Roof top': '<i class="fas fa-hot-tub"></i>',
+        'Jacuzzi': '<i class="fas fa-hot-tub"></i>',
+        'Asadores': '<i class="fas fa-fire"></i>',
+        'Seguridad': '<i class="fas fa-shield-alt"></i>',
+        'Juegos infantiles': '<i class="fas fa-child"></i>',
+        'Patio de juegos': '<i class="fas fa-child"></i>',
+        'Lavandería': '<i class="fas fa-tshirt"></i>',
+        'Family room': '<i class="fas fa-users"></i>',
+        'Bodega': '<i class="fas fa-warehouse"></i>',
+        'Business center': '<i class="fas fa-briefcase"></i>',
+        'Coworking': '<i class="fas fa-laptop-house"></i>',
+        'Spa': '<i class="fas fa-spa"></i>',
+        'Boliche': '<i class="fas fa-bowling-ball"></i>',
+        'Cancha': '<i class="fas fa-futbol"></i>',
+        'Golf': '<i class="fas fa-golf-ball"></i>',
+        'Ciclovía': '<i class="fas fa-bicycle"></i>',
+        'Área comercial': '<i class="fas fa-store"></i>',
+        'Pet park': '<i class="fas fa-dog"></i>',
+        'BBQ': '<i class="fas fa-fire"></i>'
     };
-       
-    // Comprobar específicamente para metros cuadrados
-    if (feature.includes('m²')) {
-        return icons['m²'];
-    }
-    
-    // Comprobación para otras características
+    // Normalización para variantes y sinónimos
+    const lower = feature.toLowerCase();
+    if (lower.includes('habitacion')) return icons['Habitaciones'];
+    if (lower.includes('baño')) return icons['Baños'];
+    if (lower.includes('m²')) return icons['m²'];
     for (let key in icons) {
-        if (feature.includes(key)) {
+        if (lower.includes(key.toLowerCase())) {
             return icons[key];
         }
     }
-    return '<i class="fas fa-check"></i>'; // Ícono de check por defecto
+    return '<i class="fas fa-check"></i>';
 }
 
 // Configurar los eventos de las tarjetas de propiedades
@@ -736,6 +850,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ciudadSelect) ciudadSelect.addEventListener('change', filtrarInmuebles);
     if (tipoSelect) tipoSelect.addEventListener('change', filtrarInmuebles);
     if (precioSelect) precioSelect.addEventListener('change', filtrarInmuebles);
+
+    // Actualizar precios al cambiar moneda
+    const selectMoneda = document.getElementById('moneda');
+    if (selectMoneda) {
+        selectMoneda.addEventListener('change', () => {
+            filtrarInmuebles();
+        });
+    }
 });
 
 // Estilos para la galería (puedes mover esto a propiedades.css)
@@ -799,4 +921,14 @@ export function getMainFeatures(caracteristicas) {
     if (m2) main.push(`${icons.metros} ${m2}`);
     let extra = caracteristicas.length > 3 ? '<span style="font-size:1.5em;vertical-align:middle;">...</span>' : '';
     return main.map(f => `<span>${f}</span>`).join('') + extra;
+}
+
+// --- Botón flotante de WhatsApp ---
+if ((window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('propiedades.html')) &&
+    !window.location.pathname.includes('contacto') && !window.location.pathname.includes('nosotros')) {
+    const waBtn = document.createElement('a');
+    waBtn.href = 'https://wa.me/529981477653?text=Hola!%20Estoy%20interesado%20en%20una%20propiedad.';
+    waBtn.className = 'wa-float-btn wa-float-animate';
+    waBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(waBtn);
 }
