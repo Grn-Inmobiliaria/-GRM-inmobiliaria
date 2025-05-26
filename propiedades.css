@@ -1153,35 +1153,44 @@ contact-button:hover {
     z-index: 9999;
     background: #25d366;
     color: #fff;
-    border-radius: 50%;
-    width: 52px;
-    height: 52px;
+    border-radius: 28px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
+    gap: 10px;
+    font-size: 0.95rem;
     box-shadow: 0 6px 24px rgba(0,0,0,0.22);
-    transition: box-shadow 0.2s, transform 0.2s;
+    text-decoration: none;
+    transition: all 0.3s ease;
     cursor: pointer;
-    animation: wa-pulse 1.6s infinite;
-    border: none !important;
-    background-clip: border-box !important;
+    transform-origin: center;
+    border: none;
+    background-clip: padding-box;
 }
+
 .wa-float-btn i {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: #fff !important;
-    font-size: 2.2em;
+    font-size: 1.5em;
     line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
 }
+
+.wa-float-btn span {
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+}
+
 .wa-float-btn:hover {
     box-shadow: 0 12px 32px rgba(0,0,0,0.32);
-    transform: scale(1.12);
+    transform: scale(1.05);
     background: #1ebe57;
+    text-decoration: none;
 }
 .wa-float-animate {
     animation: wa-pulse 1.6s infinite;

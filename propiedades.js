@@ -330,13 +330,6 @@ export const inmuebles = [
 
 
 
-
-
-
-
-
-
-
     
    
 ];
@@ -359,6 +352,37 @@ function getPropertyIdFromUrl() {
 
 // --- Filtro de moneda global ---
 let monedaActual = 'MXN';
+let currentExchangeRate = 0.059; // Declarar la variable aquí, accesible globalmente en el módulo
+
+// URL y Token para la API de Banxico
+const banxicoUrl = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/oportuno?token=";
+const banxicoToken = "b6d4b6d0895d1da76953c7d005f66b8ad4711102e392336e5d31d687465a8198"; // Tu token proporcionado
+
+async function consultaTipoCambio() {
+    try {
+        const response = await fetch(banxicoUrl + banxicoToken);
+        if (!response.ok) {
+            console.error("Error al obtener la tasa de cambio:", response.statusText);
+            // Si hay un error, mantenemos la tasa por defecto
+            return;
+        }
+        const data = await response.json();
+        // Asumiendo la estructura de respuesta de la API de Banxico
+        if (data && data.bmx && data.bmx.series && data.bmx.series.length > 0 && data.bmx.series[0].datos && data.bmx.series[0].datos.length > 0) {
+            const latestRate = parseFloat(data.bmx.series[0].datos[0].dato);
+            if (!isNaN(latestRate)) {
+                currentExchangeRate = latestRate; // Actualizar la variable global
+                console.log("Tasa de cambio actualizada:", currentExchangeRate);
+            } else {
+                console.error("No se pudo parsear la tasa de cambio de la respuesta.");
+            }
+        } else {
+            console.error("Estructura de respuesta inesperada de la API de Banxico.");
+        }
+    } catch (error) {
+        console.error("Error en la solicitud a la API de Banxico:", error);
+    }
+}
 
 function actualizarMoneda() {
     const selectMoneda = document.getElementById('moneda');
@@ -497,8 +521,8 @@ export function formatPrice(amount, currency) {
 
 // Función para convertir MXN a USD
 export function convertMXNtoUSD(mxnAmount) {
-    const exchangeRate = 0.059; // Tasa de cambio aproximada MXN a USD
-    return mxnAmount * exchangeRate;
+    // Usar la tasa de cambio obtenida de la API
+    return mxnAmount * currentExchangeRate;
 }
 
 // Mostrar detalles de la propiedad en modal
@@ -832,7 +856,8 @@ export function setupPropertyCards() {
 }
 
 // Inicializar la página cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => { // Marcar como async para usar await
+    await consultaTipoCambio(); // Obtener la tasa de cambio antes de renderizar
     renderInmuebles();
     setupPropertyCards();
     document.body.addEventListener('click', e => {
@@ -929,6 +954,6 @@ if ((window.location.pathname.endsWith('index.html') || window.location.pathname
     const waBtn = document.createElement('a');
     waBtn.href = 'https://wa.me/529981477653?text=Hola!%20Estoy%20interesado%20en%20una%20propiedad.';
     waBtn.className = 'wa-float-btn wa-float-animate';
-    waBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    waBtn.innerHTML = '<i class="fab fa-whatsapp"></i><span>Contáctanos</span>';
     document.body.appendChild(waBtn);
 }
