@@ -147,7 +147,7 @@ export const inmuebles = [
     },
     {
         id: 4,
-        titulo: "Departamento en preventa desde 1 habitación",
+        titulo: "Departamento en pre venta desde 1 habitación",
         precio: "$3,740,000 MXN",
         ubicacion: "Cumbres Residencial Cumbres, Benito Juárez",
         caracteristicas: [
