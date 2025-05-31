@@ -5,6 +5,7 @@ export const inmuebles = [
         titulo: "Departamento Penthouse en Venta en Mayakoba, Playa del Carmen",
         precio: "$3,500,000 MXN",
         ubicacion: "Mayakoba, Playa del Carmen",
+        ciudad: "Playa del Carmen",
         caracteristicas: [
             "2 Habitaciones",
             "2 Baños",
@@ -188,7 +189,7 @@ export const inmuebles = [
         id: 5,
         titulo: "Departamento en pre venta en avenida Colosio, Cancún",
         precio: "$3,302,770 MXN",
-        ubicacion: "Ave. Luis Donaldo Colosio #Km 11 Alfredo V Bonfil, Benito Juárez",
+        ubicacion: " Cancún",
         caracteristicas: [
             "1 Habitación",
             "1 Baño",
