@@ -349,7 +349,13 @@ export const inmuebles = [
             "Seguridad 24/7"
         ],
         descripcion: `Exclusivo departamento con vista al mar en Puerto Cancún. Acabados de lujo, amplios espacios y todas las comodidades para una vida de primer nivel. Acceso a amenidades premium incluyendo marina privada, campo de golf y club de playa.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_9/Inmueble_9_1.jpg",
+            "inmobiliaria-logos/Inmueble_9/Inmueble_9_2.jpg",
+            "inmobiliaria-logos/Inmueble_9/Inmueble_9_3.jpg",
+            "inmobiliaria-logos/Inmueble_9/Inmueble_9_4.jpg",
+            "inmobiliaria-logos/Inmueble_9/Inmueble_9_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 180,
@@ -381,7 +387,13 @@ export const inmuebles = [
             "Área de lavado"
         ],
         descripcion: `Hermosa residencia en una de las zonas más exclusivas de Mérida. Diseño moderno, espacios amplios y perfectamente iluminados. Ideal para familias que buscan confort y exclusividad.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_10/Inmueble_10_1.jpg",
+            "inmobiliaria-logos/Inmueble_10/Inmueble_10_2.jpg",
+            "inmobiliaria-logos/Inmueble_10/Inmueble_10_3.jpg",
+            "inmobiliaria-logos/Inmueble_10/Inmueble_10_4.jpg",
+            "inmobiliaria-logos/Inmueble_10/Inmueble_10_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 280,
@@ -414,7 +426,13 @@ export const inmuebles = [
             "Bodega"
         ],
         descripcion: `Espectacular penthouse de lujo con las mejores vistas de Cancún. Espacios únicos y acabados de primera calidad. Acceso directo a la playa y amenidades exclusivas.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_11/Inmueble_11_1.jpg",
+            "inmobiliaria-logos/Inmueble_11/Inmueble_11_2.jpg",
+            "inmobiliaria-logos/Inmueble_11/Inmueble_11_3.jpg",
+            "inmobiliaria-logos/Inmueble_11/Inmueble_11_4.jpg",
+            "inmobiliaria-logos/Inmueble_11/Inmueble_11_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 350,
@@ -447,7 +465,13 @@ export const inmuebles = [
             "Cuarto de servicio"
         ],
         descripcion: `Residencia de lujo dentro del prestigioso Yucatán Country Club. Diseño arquitectónico único, acabados premium y todas las comodidades para una vida de alto nivel.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_12/Inmueble_12_1.jpg",
+            "inmobiliaria-logos/Inmueble_12/Inmueble_12_2.jpg",
+            "inmobiliaria-logos/Inmueble_12/Inmueble_12_3.jpg",
+            "inmobiliaria-logos/Inmueble_12/Inmueble_12_4.jpg",
+            "inmobiliaria-logos/Inmueble_12/Inmueble_12_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 450,
@@ -479,7 +503,13 @@ export const inmuebles = [
             "Seguridad 24/7"
         ],
         descripcion: `Moderno departamento en el corazón de Cancún. Tecnología de punta, espacios versátiles y amenidades de primer nivel. Ubicación privilegiada cerca de todo.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_13/Inmueble_13_1.jpg",
+            "inmobiliaria-logos/Inmueble_13/Inmueble_13_2.jpg",
+            "inmobiliaria-logos/Inmueble_13/Inmueble_13_3.jpg",
+            "inmobiliaria-logos/Inmueble_13/Inmueble_13_4.jpg",
+            "inmobiliaria-logos/Inmueble_13/Inmueble_13_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 210,
@@ -512,7 +542,13 @@ export const inmuebles = [
             "Cuarto de servicio"
         ],
         descripcion: `Espectacular villa frente al mar en la costa de Yucatán. Diseño contemporáneo que maximiza las vistas al mar. Perfecta para quienes buscan exclusividad y privacidad.`,
-        imagenes: [],
+        imagenes: [
+            "inmobiliaria-logos/Inmueble_14/Inmueble_14_1.jpg",
+            "inmobiliaria-logos/Inmueble_14/Inmueble_14_2.jpg",
+            "inmobiliaria-logos/Inmueble_14/Inmueble_14_3.jpg",
+            "inmobiliaria-logos/Inmueble_14/Inmueble_14_4.jpg",
+            "inmobiliaria-logos/Inmueble_14/Inmueble_14_5.jpg"
+        ],
         estado: "Venta",
         disponibilidad: "Disponible",
         metrosCuadrados: 580,
