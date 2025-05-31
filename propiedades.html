@@ -39,9 +39,8 @@
             <div class="filtros-container">
                 <select id="ciudad">
                     <option value="">Selecciona una Ciudad</option>
-                    <option value="cancún">Cancún</option>
-                    <option value="mérida">Mérida</option>
-                 
+                    <option value="Cancún">Cancún</option>
+                    <option value="Mérida">Mérida</option>
                 </select>
                 <select id="tipo">
                     <option value="">Tipo de Inmueble</option>
@@ -116,12 +115,10 @@
     <script src="navigation.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPG_o62F3U-CZNDt0ORQYhkwJLz9twhYw&v=beta&callback=Function.prototype"></script>
     <script type="module">
-        import { renderInmuebles, setupPropertyCards } from './propiedades.js';
+        import { renderInmuebles, setupPropertyCards, filtrarInmuebles } from './propiedades.js';
         
-        document.addEventListener('DOMContentLoaded', () => {
-            renderInmuebles();
-            setupPropertyCards();
-        });
+        // La inicialización ya se maneja en propiedades.js
+        console.log('Script cargado');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </body>

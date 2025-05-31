@@ -5,7 +5,7 @@ export const inmuebles = [
         titulo: "Departamento Penthouse en Venta en Mayakoba, Playa del Carmen",
         precio: "$3,500,000 MXN",
         ubicacion: "Mayakoba, Playa del Carmen",
-        ciudad: "Playa del Carmen",
+        ciudad: "Cancún",
         caracteristicas: [
             "2 Habitaciones",
             "2 Baños",
@@ -60,6 +60,7 @@ export const inmuebles = [
         titulo: "Departamento 2 habitaciones en pre venta Cancún",
         precio: "$3,213,272 MXN",
         ubicacion: "Huayacán km 6 Supermanzana 312, Benito Juárez",
+        ciudad: "Cancún",
         caracteristicas: [
             "2 Habitaciones",
             "2 Baños",
@@ -101,6 +102,7 @@ export const inmuebles = [
         titulo: "Departamento SLS Harbour 2 habitaciones en Cancún",
         precio: "$28,000,000 MXN",
         ubicacion: "Puerto Cancún, Benito Juárez",
+        ciudad: "Cancún",
         caracteristicas: [
             "2 Habitaciones",
             "4 Baños",
@@ -151,6 +153,7 @@ export const inmuebles = [
         titulo: "Departamento en pre venta desde 1 habitación",
         precio: "$3,740,000 MXN",
         ubicacion: "Cumbres Residencial Cumbres, Benito Juárez",
+        ciudad: "Mérida",
         caracteristicas: [
             "1 Habitación",
             "1 Baño",
@@ -190,6 +193,7 @@ export const inmuebles = [
         titulo: "Departamento en pre venta en avenida Colosio, Cancún",
         precio: "$3,302,770 MXN",
         ubicacion: " Cancún",
+        ciudad: "Cancún",
         caracteristicas: [
             "1 Habitación",
             "1 Baño",
@@ -237,6 +241,7 @@ export const inmuebles = [
         titulo: "Departamento en pre venta 2 habitaciones con vista a la laguna",
         precio: "$5,367,944 MXN",
         ubicacion: "Blvd Colosio Supermanzana 295, Benito Juárez",
+        ciudad: "Cancún",
         caracteristicas: [
             "2 Habitaciones",
             "2 Baños",
@@ -284,6 +289,7 @@ export const inmuebles = [
         titulo: "Departamento de 1 habitación Cancún",
         precio: "$3,579,660 MXN",
         ubicacion: "Carretera Tulum Cancún Supermanzana 19, Benito Juárez",
+        ciudad: "Mérida",
         caracteristicas: [
             "1 Habitación",
             "1 Baño",
@@ -323,16 +329,203 @@ export const inmuebles = [
             estado: "Documentación completa"
         }
     },
-   
-
-
-
-
-
-
-
-    
-   
+    {
+        id: 9,
+        titulo: "Departamento de Lujo en Puerto Cancún",
+        precio: "$5,800,000 MXN",
+        ubicacion: "Puerto Cancún, Zona Hotelera",
+        ciudad: "Cancún",
+        caracteristicas: [
+            "3 Habitaciones",
+            "3.5 Baños",
+            "2 Estacionamientos",
+            "180 m²",
+            "Piso 8",
+            "Vista al mar",
+            "Terraza",
+            "Cocina equipada",
+            "Área de servicio",
+            "Aire acondicionado",
+            "Seguridad 24/7"
+        ],
+        descripcion: `Exclusivo departamento con vista al mar en Puerto Cancún. Acabados de lujo, amplios espacios y todas las comodidades para una vida de primer nivel. Acceso a amenidades premium incluyendo marina privada, campo de golf y club de playa.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 180,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2023",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    },
+    {
+        id: 10,
+        titulo: "Casa Residencial en Mérida Norte",
+        precio: "$4,200,000 MXN",
+        ubicacion: "Altabrisa, Mérida",
+        ciudad: "Mérida",
+        caracteristicas: [
+            "4 Habitaciones",
+            "4 Baños",
+            "3 Estacionamientos",
+            "280 m²",
+            "Jardín",
+            "Alberca",
+            "Cuarto de servicio",
+            "Cocina integral",
+            "Área de lavado"
+        ],
+        descripcion: `Hermosa residencia en una de las zonas más exclusivas de Mérida. Diseño moderno, espacios amplios y perfectamente iluminados. Ideal para familias que buscan confort y exclusividad.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 280,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2024",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    },
+    {
+        id: 11,
+        titulo: "Penthouse con Vista Panorámica en Zona Hotelera",
+        precio: "$7,500,000 MXN",
+        ubicacion: "Zona Hotelera, Km 12.5",
+        ciudad: "Cancún",
+        caracteristicas: [
+            "4 Habitaciones",
+            "5 Baños",
+            "3 Estacionamientos",
+            "350 m²",
+            "Terraza panorámica",
+            "Jacuzzi privado",
+            "Bar",
+            "Sala de cine",
+            "Cuarto de servicio",
+            "Bodega"
+        ],
+        descripcion: `Espectacular penthouse de lujo con las mejores vistas de Cancún. Espacios únicos y acabados de primera calidad. Acceso directo a la playa y amenidades exclusivas.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 350,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2022",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    },
+    {
+        id: 12,
+        titulo: "Casa de Lujo en Country Club",
+        precio: "$6,800,000 MXN",
+        ubicacion: "Yucatán Country Club, Mérida",
+        ciudad: "Mérida",
+        caracteristicas: [
+            "5 Habitaciones",
+            "6 Baños",
+            "4 Estacionamientos",
+            "450 m²",
+            "Jardín amplio",
+            "Alberca privada",
+            "Sala de juegos",
+            "Gimnasio",
+            "Cava",
+            "Cuarto de servicio"
+        ],
+        descripcion: `Residencia de lujo dentro del prestigioso Yucatán Country Club. Diseño arquitectónico único, acabados premium y todas las comodidades para una vida de alto nivel.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 450,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2023",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    },
+    {
+        id: 13,
+        titulo: "Departamento de Lujo en Downtown Cancún",
+        precio: "$4,900,000 MXN",
+        ubicacion: "Downtown Cancún",
+        ciudad: "Cancún",
+        caracteristicas: [
+            "3 Habitaciones",
+            "3.5 Baños",
+            "2 Estacionamientos",
+            "210 m²",
+            "Vista a la ciudad",
+            "Terraza",
+            "Área de BBQ",
+            "Smart Home",
+            "Seguridad 24/7"
+        ],
+        descripcion: `Moderno departamento en el corazón de Cancún. Tecnología de punta, espacios versátiles y amenidades de primer nivel. Ubicación privilegiada cerca de todo.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 210,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2024",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    },
+    {
+        id: 14,
+        titulo: "Villa de Lujo en la Costa",
+        precio: "$8,900,000 MXN",
+        ubicacion: "Telchac Puerto",
+        ciudad: "Mérida",
+        caracteristicas: [
+            "6 Habitaciones",
+            "7 Baños",
+            "4 Estacionamientos",
+            "580 m²",
+            "Frente al mar",
+            "Muelle privado",
+            "Alberca infinita",
+            "Casa de bote",
+            "Terraza panorámica",
+            "Cuarto de servicio"
+        ],
+        descripcion: `Espectacular villa frente al mar en la costa de Yucatán. Diseño contemporáneo que maximiza las vistas al mar. Perfecta para quienes buscan exclusividad y privacidad.`,
+        imagenes: [],
+        estado: "Venta",
+        disponibilidad: "Disponible",
+        metrosCuadrados: 580,
+        documentacion: {
+            escrituras: "En orden",
+            predial: "Al corriente",
+            servicios: "Todos los servicios",
+            gravamen: "Libre de gravamen",
+            antiguedad: "2023",
+            estado: "Documentación completa"
+        },
+        ubicacion_link: ""
+    }
 ];
 
 // --- Normaliza estado a 'Preventa' si el título contiene 'preventa', 'pre venta' o 'pre-venta' ---
@@ -396,7 +589,10 @@ function actualizarMoneda() {
 export function renderInmuebles(lista = inmuebles) {
     actualizarMoneda();
     const grid = document.querySelector('.property-grid-detalle');
-    if (!grid) return;
+    if (!grid) {
+        console.error('No se encontró el elemento grid');
+        return;
+    }
     const propertyId = getPropertyIdFromUrl();
     if (propertyId) {
         lista = lista.filter(prop => prop.id.toString() === propertyId);
@@ -472,19 +668,21 @@ function showGallery(idx) {
 // Obtener valores de los filtros de búsqueda
 function getFiltros() {
     return {
-        ciudad: document.getElementById('ciudad').value.toLowerCase(),
-        tipo: document.getElementById('tipo').value.toLowerCase(),
-        operacion: document.getElementById('operacion').value.toLowerCase(),
-        precio: document.getElementById('precio').value
+        ciudad: document.getElementById('ciudad')?.value || '',
+        tipo: document.getElementById('tipo')?.value.toLowerCase() || '',
+        operacion: document.getElementById('operacion')?.value.toLowerCase() || '',
+        precio: document.getElementById('precio')?.value || ''
     };
 }
 
 // --- Filtro de preventa en operación ---
-function filtrarInmuebles() {
+export function filtrarInmuebles() {
+    console.log('Filtrando inmuebles...');
     actualizarMoneda();
     const filtros = getFiltros();
+    console.log('Filtros actuales:', filtros);
     let inmueblesFiltrados = inmuebles.filter(inmueble => {
-        const cumpleCiudad = !filtros.ciudad || inmueble.ubicacion.toLowerCase().includes(filtros.ciudad);
+        const cumpleCiudad = !filtros.ciudad || inmueble.ciudad === filtros.ciudad;
         const cumpleTipo = !filtros.tipo || inmueble.titulo.toLowerCase().includes(filtros.tipo);
         let cumpleOperacion = true;
         if (filtros.operacion === 'preventa') {
@@ -858,15 +1056,22 @@ export function setupPropertyCards() {
 
 // Inicializar la página cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', async () => { // Marcar como async para usar await
-    await consultaTipoCambio(); // Obtener la tasa de cambio antes de renderizar
-    renderInmuebles();
-    setupPropertyCards();
-    document.body.addEventListener('click', e => {
-        if (e.target.classList.contains('view-gallery')) {
-            const idx = e.target.getAttribute('data-idx');
-            showGallery(idx);
-        }
-    });
+    try {
+        console.log('DOM Content Loaded');
+        await consultaTipoCambio(); // Obtener la tasa de cambio antes de renderizar
+        console.log('Renderizando inmuebles...');
+        renderInmuebles(inmuebles); // Pasamos explícitamente el array de inmuebles
+        console.log('Configurando eventos...');
+        setupPropertyCards();
+        document.body.addEventListener('click', e => {
+            if (e.target.classList.contains('view-gallery')) {
+                const idx = e.target.getAttribute('data-idx');
+                showGallery(idx);
+            }
+        });
+    } catch (error) {
+        console.error('Error al inicializar:', error);
+    }
     
     // Filtrado
     const ciudadSelect = document.getElementById('ciudad');
