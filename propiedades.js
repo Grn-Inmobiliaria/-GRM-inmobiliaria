@@ -72,13 +72,13 @@ export const inmuebles = [
         ],
         descripcion: `Invierte en un departamento moderno de 2 habitaciones con 88 m², ubicado en la zona de mayor plusvalía de Cancún. Vive rodeado de lujo y confort, con más de 25 amenidades: alberca, gimnasio, coworking, spa, boliche, canchas deportivas, áreas verdes y seguridad 24/7. Opciones de pago flexibles y entrega a partir de 2025. ¡Aprovecha la oportunidad de vivir o invertir en un desarrollo de alto nivel!`,
         imagenes: [
-            "inmobiliaria-logos/Inmueble_2/Inmueble_2_1.jpg",
+            "inmobiliaria-logos/Inmueble_2/Inmueble_2_7.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_2.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_3.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_4.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_5.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_6.jpg",
-            "inmobiliaria-logos/Inmueble_2/Inmueble_2_7.jpg",
+            "inmobiliaria-logos/Inmueble_2/Inmueble_2_1.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_8.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_9.jpg",
             "inmobiliaria-logos/Inmueble_2/Inmueble_2_10.jpg",
@@ -113,7 +113,7 @@ export const inmuebles = [
         ],
         descripcion: `Exclusivo departamento en SLS Harbour, Puerto Cancún. 2 recámaras, family room convertible, cocina italiana, cuarto de servicio, 2 estacionamientos y vistas panorámicas. Disfruta de amenidades premium: acceso a playa, alberca, gimnasio, cine, canchas deportivas y seguridad total. Entrega inmediata y lujo inigualable en cada detalle.`,
         imagenes: [
-            "inmobiliaria-logos/Inmueble_3/Inmueble_3_1.jpg",
+            "inmobiliaria-logos/Inmueble_3/Inmueble_3_16.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_2.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_3.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_4.jpg",
@@ -128,7 +128,7 @@ export const inmuebles = [
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_13.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_14.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_15.jpg",
-            "inmobiliaria-logos/Inmueble_3/Inmueble_3_16.jpg",
+            "inmobiliaria-logos/Inmueble_3/Inmueble_3_1.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_17.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_18.jpg",
             "inmobiliaria-logos/Inmueble_3/Inmueble_3_19.jpg",
@@ -203,7 +203,7 @@ export const inmuebles = [
         ],
         descripcion: `Modernos departamentos con vistas a la laguna y zona hotelera, más de 20 amenidades de lujo y ubicación privilegiada cerca de la universidad Anáhuac y aeropuerto de Cancún. Disfruta de albercas, gimnasio, coworking, áreas verdes, canchas deportivas y espacios para toda la familia. Entrega en diciembre 2026 y planes de pago flexibles con atractivos descuentos.`,
         imagenes: [
-            "inmobiliaria-logos/Inmueble_5/Inmueble_5_1.jpg",
+            "inmobiliaria-logos/Inmueble_5/Inmueble_5_11.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_2.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_3.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_4.jpg",
@@ -213,7 +213,7 @@ export const inmuebles = [
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_8.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_9.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_10.jpg",
-            "inmobiliaria-logos/Inmueble_5/Inmueble_5_11.jpg",
+            "inmobiliaria-logos/Inmueble_5/Inmueble_5_1.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_12.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_13.jpg",
             "inmobiliaria-logos/Inmueble_5/Inmueble_5_14.jpg",
@@ -252,7 +252,7 @@ export const inmuebles = [
         ],
         descripcion: `Departamentos de 1, 2 o 3 habitaciones con vistas increíbles a la laguna Nichupté y Zona Hotelera. Complejo de 4 torres con más de 20 amenidades: albercas, gimnasio, golf virtual, ciclovía, canchas, spa, boliche, business center, área comercial y más. Ubicación estratégica en Blvd. Colosio, entrega a finales de 2027. ¡Invierte en calidad de vida y plusvalía!`,
         imagenes: [
-            "inmobiliaria-logos/Inmueble_6/Inmueble_6_1.jpg",
+            "inmobiliaria-logos/Inmueble_6/Inmueble_6_16.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_2.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_3.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_4.jpg",
@@ -267,7 +267,7 @@ export const inmuebles = [
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_13.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_14.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_15.jpg",
-            "inmobiliaria-logos/Inmueble_6/Inmueble_6_16.jpg",
+            "inmobiliaria-logos/Inmueble_6/Inmueble_6_1.jpg",
             "inmobiliaria-logos/Inmueble_6/Inmueble_6_17.jpg"
         ],
         ubicacion_link: "",
@@ -301,14 +301,14 @@ export const inmuebles = [
         ],
         descripcion: `Desarrollo residencial con excelente ubicación en Cancún, sobre avenida Colosio. Departamentos de 1 y 2 habitaciones, modelos desde 50 m², con terraza, cocina integral y amenidades de primer nivel: alberca, áreas verdes, fitness club, yoga deck, BBQ zone, pet park y más. Entrega en 2025. ¡Vive o invierte en un entorno moderno y seguro!`,
         imagenes: [
-            "inmobiliaria-logos/Inmueble_7/Inmueble_7_1.jpg",
+            "inmobiliaria-logos/Inmueble_7/Inmueble_7_8.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_2.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_3.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_4.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_5.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_6.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_7.jpg",
-            "inmobiliaria-logos/Inmueble_7/Inmueble_7_8.jpg",
+            "inmobiliaria-logos/Inmueble_7/Inmueble_7_1.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_9.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_10.jpg",
             "inmobiliaria-logos/Inmueble_7/Inmueble_7_11.jpg",
@@ -328,239 +328,6 @@ export const inmuebles = [
             antiguedad: "",
             estado: "Documentación completa"
         }
-    },
-    {
-        id: 9,
-        titulo: "Departamento de Lujo en Puerto Cancún",
-        precio: "$5,800,000 MXN",
-        ubicacion: "Puerto Cancún, Zona Hotelera",
-        ciudad: "Cancún",
-        caracteristicas: [
-            "3 Habitaciones",
-            "3.5 Baños",
-            "2 Estacionamientos",
-            "180 m²",
-            "Piso 8",
-            "Vista al mar",
-            "Terraza",
-            "Cocina equipada",
-            "Área de servicio",
-            "Aire acondicionado",
-            "Seguridad 24/7"
-        ],
-        descripcion: `Exclusivo departamento con vista al mar en Puerto Cancún. Acabados de lujo, amplios espacios y todas las comodidades para una vida de primer nivel. Acceso a amenidades premium incluyendo marina privada, campo de golf y club de playa.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_9/Inmueble_9_1.jpg",
-            "inmobiliaria-logos/Inmueble_9/Inmueble_9_2.jpg",
-            "inmobiliaria-logos/Inmueble_9/Inmueble_9_3.jpg",
-            "inmobiliaria-logos/Inmueble_9/Inmueble_9_4.jpg",
-            "inmobiliaria-logos/Inmueble_9/Inmueble_9_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 180,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2023",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
-    },
-    {
-        id: 10,
-        titulo: "Casa Residencial en Mérida Norte",
-        precio: "$4,200,000 MXN",
-        ubicacion: "Altabrisa, Mérida",
-        ciudad: "Mérida",
-        caracteristicas: [
-            "4 Habitaciones",
-            "4 Baños",
-            "3 Estacionamientos",
-            "280 m²",
-            "Jardín",
-            "Alberca",
-            "Cuarto de servicio",
-            "Cocina integral",
-            "Área de lavado"
-        ],
-        descripcion: `Hermosa residencia en una de las zonas más exclusivas de Mérida. Diseño moderno, espacios amplios y perfectamente iluminados. Ideal para familias que buscan confort y exclusividad.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_10/Inmueble_10_1.jpg",
-            "inmobiliaria-logos/Inmueble_10/Inmueble_10_2.jpg",
-            "inmobiliaria-logos/Inmueble_10/Inmueble_10_3.jpg",
-            "inmobiliaria-logos/Inmueble_10/Inmueble_10_4.jpg",
-            "inmobiliaria-logos/Inmueble_10/Inmueble_10_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 280,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2024",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
-    },
-    {
-        id: 11,
-        titulo: "Penthouse con Vista Panorámica en Zona Hotelera",
-        precio: "$7,500,000 MXN",
-        ubicacion: "Zona Hotelera, Km 12.5",
-        ciudad: "Cancún",
-        caracteristicas: [
-            "4 Habitaciones",
-            "5 Baños",
-            "3 Estacionamientos",
-            "350 m²",
-            "Terraza panorámica",
-            "Jacuzzi privado",
-            "Bar",
-            "Sala de cine",
-            "Cuarto de servicio",
-            "Bodega"
-        ],
-        descripcion: `Espectacular penthouse de lujo con las mejores vistas de Cancún. Espacios únicos y acabados de primera calidad. Acceso directo a la playa y amenidades exclusivas.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_11/Inmueble_11_1.jpg",
-            "inmobiliaria-logos/Inmueble_11/Inmueble_11_2.jpg",
-            "inmobiliaria-logos/Inmueble_11/Inmueble_11_3.jpg",
-            "inmobiliaria-logos/Inmueble_11/Inmueble_11_4.jpg",
-            "inmobiliaria-logos/Inmueble_11/Inmueble_11_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 350,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2022",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
-    },
-    {
-        id: 12,
-        titulo: "Casa de Lujo en Country Club",
-        precio: "$6,800,000 MXN",
-        ubicacion: "Yucatán Country Club, Mérida",
-        ciudad: "Mérida",
-        caracteristicas: [
-            "5 Habitaciones",
-            "6 Baños",
-            "4 Estacionamientos",
-            "450 m²",
-            "Jardín amplio",
-            "Alberca privada",
-            "Sala de juegos",
-            "Gimnasio",
-            "Cava",
-            "Cuarto de servicio"
-        ],
-        descripcion: `Residencia de lujo dentro del prestigioso Yucatán Country Club. Diseño arquitectónico único, acabados premium y todas las comodidades para una vida de alto nivel.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_12/Inmueble_12_1.jpg",
-            "inmobiliaria-logos/Inmueble_12/Inmueble_12_2.jpg",
-            "inmobiliaria-logos/Inmueble_12/Inmueble_12_3.jpg",
-            "inmobiliaria-logos/Inmueble_12/Inmueble_12_4.jpg",
-            "inmobiliaria-logos/Inmueble_12/Inmueble_12_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 450,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2023",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
-    },
-    {
-        id: 13,
-        titulo: "Departamento de Lujo en Downtown Cancún",
-        precio: "$4,900,000 MXN",
-        ubicacion: "Downtown Cancún",
-        ciudad: "Cancún",
-        caracteristicas: [
-            "3 Habitaciones",
-            "3.5 Baños",
-            "2 Estacionamientos",
-            "210 m²",
-            "Vista a la ciudad",
-            "Terraza",
-            "Área de BBQ",
-            "Smart Home",
-            "Seguridad 24/7"
-        ],
-        descripcion: `Moderno departamento en el corazón de Cancún. Tecnología de punta, espacios versátiles y amenidades de primer nivel. Ubicación privilegiada cerca de todo.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_13/Inmueble_13_1.jpg",
-            "inmobiliaria-logos/Inmueble_13/Inmueble_13_2.jpg",
-            "inmobiliaria-logos/Inmueble_13/Inmueble_13_3.jpg",
-            "inmobiliaria-logos/Inmueble_13/Inmueble_13_4.jpg",
-            "inmobiliaria-logos/Inmueble_13/Inmueble_13_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 210,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2024",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
-    },
-    {
-        id: 14,
-        titulo: "Villa de Lujo en la Costa",
-        precio: "$8,900,000 MXN",
-        ubicacion: "Telchac Puerto",
-        ciudad: "Mérida",
-        caracteristicas: [
-            "6 Habitaciones",
-            "7 Baños",
-            "4 Estacionamientos",
-            "580 m²",
-            "Frente al mar",
-            "Muelle privado",
-            "Alberca infinita",
-            "Casa de bote",
-            "Terraza panorámica",
-            "Cuarto de servicio"
-        ],
-        descripcion: `Espectacular villa frente al mar en la costa de Yucatán. Diseño contemporáneo que maximiza las vistas al mar. Perfecta para quienes buscan exclusividad y privacidad.`,
-        imagenes: [
-            "inmobiliaria-logos/Inmueble_14/Inmueble_14_1.jpg",
-            "inmobiliaria-logos/Inmueble_14/Inmueble_14_2.jpg",
-            "inmobiliaria-logos/Inmueble_14/Inmueble_14_3.jpg",
-            "inmobiliaria-logos/Inmueble_14/Inmueble_14_4.jpg",
-            "inmobiliaria-logos/Inmueble_14/Inmueble_14_5.jpg"
-        ],
-        estado: "Venta",
-        disponibilidad: "Disponible",
-        metrosCuadrados: 580,
-        documentacion: {
-            escrituras: "En orden",
-            predial: "Al corriente",
-            servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
-            antiguedad: "2023",
-            estado: "Documentación completa"
-        },
-        ubicacion_link: ""
     }
 ];
 
@@ -1004,68 +771,44 @@ function getAllFeatures(caracteristicas) {
 
 // Devuelve el ícono adecuado según la característica
 export function getFeatureIcon(feature) {
-    const icons = {
-        'Habitaciones': '<i class="fas fa-bed"></i>',
-        'Habitación': '<i class="fas fa-bed"></i>',
-        'Baños': '<i class="fas fa-bath"></i>',
-        'Baño': '<i class="fas fa-bath"></i>',
-        'Piscina': '<i class="fas fa-swimmer"></i>',
-        'Jardín': '<i class="fas fa-tree"></i>',
-        'Terraza': '<i class="fas fa-umbrella-beach"></i>',
-        'Balcón': '<i class="fas fa-archway"></i>',
-        'Alberca': '<i class="fas fa-water"></i>',
-        'Vista al Mar': '<i class="fas fa-water"></i>',
-        'Terraza Privada': '<i class="fas fa-umbrella-beach"></i>',
-        'Área de BBQ': '<i class="fas fa-fire"></i>',
-        'Patio': '<i class="fas fa-leaf"></i>',
-        'Cerca del Mar': '<i class="fas fa-water"></i>',
-        'Estacionamiento': '<i class="fas fa-parking"></i>',
-        'Cine': '<i class="fas fa-film"></i>',
-        'Gimnasio': '<i class="fas fa-dumbbell"></i>',
-        'Muelle Privado': '<i class="fas fa-anchor"></i>',
-        'Cenote Privado': '<i class="fas fa-water"></i>',
-        'm²': '<i class="fas fa-ruler-combined"></i>',
-        'Amueblado': '<i class="fas fa-couch"></i>',
-        'Aire acondicionado': '<i class="fas fa-snowflake"></i>',
-        'Elevador': '<i class="fas fa-elevator"></i>',
-        'Fraccionamiento privado': '<i class="fas fa-city"></i>',
-        'Mantenimiento': '<i class="fas fa-coins"></i>',
-        'Piso': '<i class="fas fa-building"></i>',
-        'Seguridad 24 horas': '<i class="fas fa-shield-alt"></i>',
-        'Área de juegos infantiles': '<i class="fas fa-child"></i>',
-        'Roof top con jacuzzi y asadores': '<i class="fas fa-hot-tub"></i>',
-        'Cocina integral': '<i class="fas fa-utensils"></i>',
-        'Roof top': '<i class="fas fa-hot-tub"></i>',
-        'Jacuzzi': '<i class="fas fa-hot-tub"></i>',
-        'Asadores': '<i class="fas fa-fire"></i>',
-        'Seguridad': '<i class="fas fa-shield-alt"></i>',
-        'Juegos infantiles': '<i class="fas fa-child"></i>',
-        'Patio de juegos': '<i class="fas fa-child"></i>',
-        'Lavandería': '<i class="fas fa-tshirt"></i>',
-        'Family room': '<i class="fas fa-users"></i>',
-        'Bodega': '<i class="fas fa-warehouse"></i>',
-        'Business center': '<i class="fas fa-briefcase"></i>',
-        'Coworking': '<i class="fas fa-laptop-house"></i>',
-        'Spa': '<i class="fas fa-spa"></i>',
-        'Boliche': '<i class="fas fa-bowling-ball"></i>',
-        'Cancha': '<i class="fas fa-futbol"></i>',
-        'Golf': '<i class="fas fa-golf-ball"></i>',
-        'Ciclovía': '<i class="fas fa-bicycle"></i>',
-        'Área comercial': '<i class="fas fa-store"></i>',
-        'Pet park': '<i class="fas fa-dog"></i>',
-        'BBQ': '<i class="fas fa-fire"></i>'
-    };
-    // Normalización para variantes y sinónimos
-    const lower = feature.toLowerCase();
-    if (lower.includes('habitacion')) return icons['Habitaciones'];
-    if (lower.includes('baño')) return icons['Baños'];
-    if (lower.includes('m²')) return icons['m²'];
-    for (let key in icons) {
-        if (lower.includes(key.toLowerCase())) {
-            return icons[key];
-        }
+    const featureLower = feature.toLowerCase();
+    if (featureLower.includes('habitacion') || featureLower.includes('recámara')) {
+        return '<i class="fas fa-bed"></i>';
+    } else if (featureLower.includes('baño')) {
+        return '<i class="fas fa-bath"></i>';
+    } else if (featureLower.includes('estacionamiento')) {
+        return '<i class="fas fa-car"></i>';
+    } else if (featureLower.includes('piso')) {
+        return '<i class="fas fa-building"></i>';
+    } else if (featureLower.includes('mantenimiento')) {
+        return '<i class="fas fa-tools"></i>';
+    } else if (featureLower.includes('terraza')) {
+        return '<i class="fas fa-umbrella-beach"></i>';
+    } else if (featureLower.includes('aire')) {
+        return '<i class="fas fa-wind"></i>';
+    } else if (featureLower.includes('amueblado')) {
+        return '<i class="fas fa-couch"></i>';
+    } else if (featureLower.includes('cocina')) {
+        return '<i class="fas fa-utensils"></i>';
+    } else if (featureLower.includes('elevador')) {
+        return '<i class="fas fa-arrow-up"></i>';
+    } else if (featureLower.includes('privado') || featureLower.includes('seguridad')) {
+        return '<i class="fas fa-shield-alt"></i>';
+    } else if (featureLower.includes('alberca')) {
+        return '<i class="fas fa-swimming-pool"></i>';
+    } else if (featureLower.includes('juegos')) {
+        return '<i class="fas fa-child"></i>';
+    } else if (featureLower.includes('gimnasio')) {
+        return '<i class="fas fa-dumbbell"></i>';
+    } else if (featureLower.includes('jardín') || featureLower.includes('jardin')) {
+        return '<i class="fas fa-tree"></i>';
+    } else if (featureLower.includes('m²') || featureLower.includes('metros')) {
+        return '<i class="fas fa-ruler-combined"></i>';
+    } else if (featureLower.includes('construcción') || featureLower.includes('construccion')) {
+        return '<i class="fas fa-hard-hat"></i>';
+    } else {
+        return '<i class="fas fa-check-circle"></i>';
     }
-    return '<i class="fas fa-check"></i>';
 }
 
 // Configurar los eventos de las tarjetas de propiedades
