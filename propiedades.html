@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Propiedades - GRN Inversión Inmobiliaria</title>
     <link rel="icon" type="image/png" href="./inmobiliaria-logos/icon_pestaña.png">
-    <link rel="stylesheet" href="arc-css/styles.css">
-    <link rel="stylesheet" href="arc-css/propiedades.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="propiedades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -22,7 +22,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="propiedades.html" class="active">Propiedades</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="https://wa.me/529981477653?text=Estoy%20interesado%20en%20agendar%20una%20cita%20-%20Contacto:%20mnieto@grn.com.mx" target="_blank" rel="noopener" title="Agendar cita por WhatsApp">Agendar Cita</a></li>
+                <li><a href="https://wa.me/529981477653?text=Estoy%20interesado%20en%20agendar%20una%20cita%20-%20Contacto:%20mnieto@grn.com.mx">Agendar Cita</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
             </ul>
             <div class="burger">
@@ -34,53 +34,45 @@
     </header>
 
     <main>
-        <section class="filtros">
+        <section class="filtros" style="padding-top: 120px;">
             <h2>Encuentra tu Propiedad Ideal</h2>
             <div class="filtros-container">
-                <select id="ciudad" title="Seleccionar ciudad" aria-label="Seleccionar ciudad">
+                <select id="ciudad">
                     <option value="">Selecciona una Ciudad</option>
                     <option value="Cancún">Cancún</option>
                     <option value="Mérida">Mérida</option>
                 </select>
-                <select id="tipo" title="Tipo de inmueble" aria-label="Tipo de inmueble">
+                <select id="tipo">
                     <option value="">Tipo de Inmueble</option>
                     <option value="casa">Casa</option>
                     <option value="departamento">Departamento</option>
                     <option value="terreno">Terreno</option>
                 </select>
-                <select id="operacion" title="Tipo de operación" aria-label="Tipo de operación">
+                <select id="operacion">
                     <option value="">Venta, Renta o Preventa</option>
                     <option value="venta">Venta</option>
                     <option value="renta">Renta</option>
                     <option value="preventa">Preventa</option>
                 </select>
-                <select id="precio" title="Rango de precio" aria-label="Rango de precio">
+                <select id="precio">
                     <option value="">Todos los precios</option>
                     <option value="3000000-4900000">$3,000,000 - $4,900,000</option>
                     <option value="5000000-7900000">$5,000,000 - $7,900,000</option>
                     <option value="8000000-10000000">$8,000,000 - $10,000,000</option>
                     <option value="11000000-999999999">$11,000,000 o más</option>
                 </select>
-                <select id="moneda" title="Tipo de moneda" aria-label="Tipo de moneda">
+                <select id="moneda">
                     <option value="MXN">MXN</option>
                     <option value="USD">USD</option>
                 </select>
             </div>
         </section>
 
-        <section class="propiedades">
-            <div class="property-grid">
-                <!-- Las propiedades se cargarán dinámicamente aquí -->
+        <section class="propiedades-detalladas">
+            <div class="property-grid-detalle">
+                <!-- Las propiedades se cargarán dinámicamente mediante JavaScript -->
             </div>
         </section>
-
-        <script src="arc-js/navigation.js"></script>
-        <script type="module">
-            import { renderInmuebles, setupPropertyCards, filtrarInmuebles } from './arc-js/propiedades.js';
-            
-            // La inicialización ya se maneja en propiedades.js
-            console.log('Script cargado');
-        </script>
     </main>
 
     <footer>
@@ -107,11 +99,11 @@
             <div class="footer-section">
                 
                 <div class="social-links">
-                    <a href="https://www.facebook.com/grninmobiliaria" target="_blank" rel="noopener" class="facebook" title="Síguenos en Facebook" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/grn_inmobiliaria?igsh=MzBkdTVidTQ0ZzB3" target="_blank" rel="noopener" class="instagram" title="Síguenos en Instagram" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank" rel="noopener" class="linkedin" title="Síguenos en LinkedIn" aria-label="Síguenos en LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener" class="youtube" title="Síguenos en YouTube" aria-label="Síguenos en YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://wa.me/529981477653" target="_blank" rel="noopener" class="whatsapp" title="Contáctanos por WhatsApp" aria-label="Contáctanos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/grninmobiliaria" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/grn_inmobiliaria?igsh=MzBkdTVidTQ0ZzB3" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/529981477653" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -120,10 +112,10 @@
         </div>
     </footer>
 
-    <script src="arc-js/navigation.js"></script>
+    <script src="navigation.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPG_o62F3U-CZNDt0ORQYhkwJLz9twhYw&v=beta&callback=Function.prototype"></script>
     <script type="module">
-        import { renderInmuebles, setupPropertyCards, filtrarInmuebles } from './arc-js/propiedades.js';
+        import { renderInmuebles, setupPropertyCards, filtrarInmuebles } from './propiedades.js';
         
         // La inicialización ya se maneja en propiedades.js
         console.log('Script cargado');
