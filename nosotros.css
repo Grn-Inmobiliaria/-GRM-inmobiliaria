@@ -7,7 +7,7 @@ body {
 .nosotros-hero {
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop&q=60');
+                url('./inmobiliaria-logos/nosotros_fondo.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -807,4 +807,9 @@ body, h1, h2, h3, h4, h5, h6, p, span, a, ul, li, label, .nosotros-hero-content,
 
 input, textarea, select, button {
     user-select: text;
+}
+
+.header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }

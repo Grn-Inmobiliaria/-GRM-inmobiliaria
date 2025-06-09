@@ -4,7 +4,7 @@ body {
 /* Estilos para la página de contacto */
 .contacto-hero {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./inmobiliaria-logos/index_y_contacto.avif');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -184,10 +184,16 @@ body {
     }
 }
 
-body, h1, h2, h3, h4, h5, h6, p, span, a, ul, li, label, .contacto-hero-content, .contact-info, .footer-content, .navbar {
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
-input, textarea, select, button {
+input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     user-select: text;
-} 
+}

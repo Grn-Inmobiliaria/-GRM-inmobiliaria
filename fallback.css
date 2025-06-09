@@ -1,0 +1,53 @@
+/* Estilos de compatibilidad para todos los navegadores */
+.carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    /* Removido -webkit-overflow-scrolling ya que está obsoleto */
+}
+
+.carousel-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-scroll-snap-align: center;
+    scroll-snap-align: center;
+}
+
+/* Estilos de scrollbar compatibles */
+* {
+    /* Estilos para WebKit (Chrome/Safari) */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(155, 155, 155, 0.5);
+        border-radius: 4px;
+    }
+}
+
+/* Asegurando que los íconos de Font Awesome se rendericen correctamente */
+.fas, .fab {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ajustes para botones accesibles */
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

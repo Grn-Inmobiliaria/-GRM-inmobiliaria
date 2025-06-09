@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     zoom: 100%;
+    font-family: 'Roboto', sans-serif;
 }
+
 /* Importar fuentes de Google Fonts */
 
 /* Reset y estilos generales */
@@ -125,7 +128,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./inmobiliaria-logos/index_y_contacto.avif');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1140,4 +1143,30 @@ section {
 .indicator:hover {
     background: #fff;
     transform: scale(1.1);
+}
+
+/* Aplicar fuente cuadrada a todas las páginas */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Corrección para Safari */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prefijos de navegador para user-select */
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.allow-select {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }

@@ -48,7 +48,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "2019",
             estado: "Documentación completa"
         },
@@ -92,7 +91,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -143,7 +141,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -183,7 +180,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -231,7 +227,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -278,7 +273,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -324,7 +318,6 @@ export const inmuebles = [
             escrituras: "En orden",
             predial: "Al corriente",
             servicios: "Todos los servicios",
-            gravamen: "Libre de gravamen",
             antiguedad: "",
             estado: "Documentación completa"
         }
@@ -637,19 +630,15 @@ export function openPropertyModal(id) {
                                 <div class="doc-item ${doc.escrituras === 'En orden' ? 'completo' : 'pendiente'}">
                                 <i class="fas fa-file-contract"></i>
                                     <span>Escrituras: ${doc.escrituras}</span>
-                            </div>
+                                </div>
                                 <div class="doc-item ${doc.predial === 'Al corriente' ? 'completo' : 'pendiente'}">
                                 <i class="fas fa-receipt"></i>
                                     <span>Predial: ${doc.predial}</span>
-                            </div>
+                                </div>
                                 <div class="doc-item ${doc.servicios === 'Todos los servicios' ? 'completo' : 'pendiente'}">
                                 <i class="fas fa-plug"></i>
                                     <span>Servicios: ${doc.servicios}</span>
-                            </div>
-                                <div class="doc-item ${doc.gravamen === 'Libre de gravamen' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-unlock"></i>
-                                    <span>Gravamen: ${doc.gravamen}</span>
-                            </div>
+                                </div>
                                 ${antiguedadHtml}
                             ` : '<p>Información de documentación no disponible</p>';
                         })()}
@@ -771,40 +760,44 @@ function getAllFeatures(caracteristicas) {
 
 // Devuelve el ícono adecuado según la característica
 export function getFeatureIcon(feature) {
+    if (!feature) return '<i class="fas fa-check-circle"></i>';
+
     const featureLower = feature.toLowerCase();
-    if (featureLower.includes('habitacion') || featureLower.includes('recámara')) {
+
+    // Usar includes con chequeos de acentos y variantes
+    if (/(habitaci[oó]n|rec[aá]mara)/.test(featureLower)) {
         return '<i class="fas fa-bed"></i>';
-    } else if (featureLower.includes('baño')) {
+    } else if (/(bañ[oó]|bano)/.test(featureLower)) {
         return '<i class="fas fa-bath"></i>';
-    } else if (featureLower.includes('estacionamiento')) {
+    } else if (/(estacionamiento|cochera)/.test(featureLower)) {
         return '<i class="fas fa-car"></i>';
-    } else if (featureLower.includes('piso')) {
+    } else if (/piso(s)?/.test(featureLower)) {
         return '<i class="fas fa-building"></i>';
-    } else if (featureLower.includes('mantenimiento')) {
+    } else if (/mantenimiento/.test(featureLower)) {
         return '<i class="fas fa-tools"></i>';
-    } else if (featureLower.includes('terraza')) {
+    } else if (/terraza/.test(featureLower)) {
         return '<i class="fas fa-umbrella-beach"></i>';
-    } else if (featureLower.includes('aire')) {
+    } else if (/(aire acondicionado|clima)/.test(featureLower)) {
         return '<i class="fas fa-wind"></i>';
-    } else if (featureLower.includes('amueblado')) {
+    } else if (/amueblado/.test(featureLower)) {
         return '<i class="fas fa-couch"></i>';
-    } else if (featureLower.includes('cocina')) {
+    } else if (/(cocina|kitchen)/.test(featureLower)) {
         return '<i class="fas fa-utensils"></i>';
-    } else if (featureLower.includes('elevador')) {
+    } else if (/(elevador|ascensor)/.test(featureLower)) {
         return '<i class="fas fa-arrow-up"></i>';
-    } else if (featureLower.includes('privado') || featureLower.includes('seguridad')) {
+    } else if (/(privado|seguridad)/.test(featureLower)) {
         return '<i class="fas fa-shield-alt"></i>';
-    } else if (featureLower.includes('alberca')) {
+    } else if (/(alberca|piscina)/.test(featureLower)) {
         return '<i class="fas fa-swimming-pool"></i>';
-    } else if (featureLower.includes('juegos')) {
-        return '<i class="fas fa-child"></i>';
-    } else if (featureLower.includes('gimnasio')) {
+    } else if (/(juegos|infantil)/.test(featureLower)) {
+        return '<i class="fas fa-gamepad"></i>';
+    } else if (/(gimnasio|gym)/.test(featureLower)) {
         return '<i class="fas fa-dumbbell"></i>';
-    } else if (featureLower.includes('jardín') || featureLower.includes('jardin')) {
+    } else if (/(jard[ií]n|jardin)/.test(featureLower)) {
         return '<i class="fas fa-tree"></i>';
-    } else if (featureLower.includes('m²') || featureLower.includes('metros')) {
+    } else if (/(m[²2]|metros|superficie)/.test(featureLower)) {
         return '<i class="fas fa-ruler-combined"></i>';
-    } else if (featureLower.includes('construcción') || featureLower.includes('construccion')) {
+    } else if (/(construcci[oó]n|obra)/.test(featureLower)) {
         return '<i class="fas fa-hard-hat"></i>';
     } else {
         return '<i class="fas fa-check-circle"></i>';
