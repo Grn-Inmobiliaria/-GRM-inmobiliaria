@@ -556,16 +556,16 @@ export function openPropertyModal(id) {
         return !basicasKeys.some(k => fNorm.includes(normalize(k))) && !antiguedadKeys.some(k => fNorm.includes(normalize(k)));
     });
 
-    const modal = document.createElement('div');
-    modal.className = 'property-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <div class="modal-left">
-                <div class="carousel">
-                    ${prop.imagenes.map((img, i) => `
-                        <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                            <img src="${img}" class="carousel-image" alt="${prop.titulo}">
-                        </div>
+   const modal = document.createElement('div');
+modal.className = 'property-modal';
+modal.innerHTML = `
+    <div class="modal-content">
+        <div class="modal-left">
+            <div class="carousel">
+                ${prop.imagenes.map((img, i) => `
+                    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                        <img src="${img}" class="carousel-image" alt="${prop.titulo}">
+                    </div>
                     `).join('')}
                     <button class="carousel-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
                     <button class="carousel-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
@@ -583,65 +583,62 @@ export function openPropertyModal(id) {
                 </div>
             </div>
             <div class="modal-right">
-                <div class="modal-info">
-                    <div class="info-section principal">
-                        <h3>${prop.titulo}</h3>
-                        <div class="price-container">
-                            <p class="price" data-price="${extractPriceValue(prop.precio)}">${monedaActual === 'USD' ? formatPrice(convertMXNtoUSD(extractPriceValue(prop.precio)), 'USD') : prop.precio}</p>
-                        </div>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> ${prop.ubicacion}</p>
+            <div class="modal-info">
+                <div class="info-section principal">
+                    <h3>${prop.titulo}</h3>
+                    <div class="price-container">
+                        <p class="price" data-price="${extractPriceValue(prop.precio)}">${monedaActual === 'USD' ? formatPrice(convertMXNtoUSD(extractPriceValue(prop.precio)), 'USD') : prop.precio}</p>
                     </div>
-                    <div class="info-section estado">
-                        <span class="status">Estado: ${prop.estado} - ${prop.disponibilidad}</span>
+                    <p class="location">📍 ${prop.ubicacion}</p>
+                </div>
+                <div class="info-section estado">
+                    <span class="status">📌 Estado: ${prop.estado} - ${prop.disponibilidad}</span>
+                </div>
+                <div class="info-section descripcion">
+                    <h4>📝 DESCRIPCIÓN</h4>
+                    <p class="description">${prop.descripcion}</p>
+                </div>
+                <div class="info-section basica">
+                    <h4>📋 INFORMACIÓN BÁSICA</h4>
+                    <div class="info-list">
+                        ${basicas.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
                     </div>
-                    <div class="info-section descripcion">
-                        <h4>DESCRIPCIÓN</h4>
-                        <p class="description">${prop.descripcion}</p>
-                        </div>
-                    <div class="info-section basica">
-                        <h4>INFORMACIÓN BÁSICA</h4>
-                        <div class="info-list">
-                            ${basicas.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
+                </div>
+                <div class="info-section superficie">
+                    <h4>📏 SUPERFICIE</h4>
+                    <div class="info-list">
+                        <span>📏 ${prop.metrosCuadrados} m²</span>
                     </div>
+                </div>
+                <div class="info-section espacios-adicionales">
+                    <h4>🏠 ESPACIOS Y ADICIONALES</h4>
+                    <div class="info-list">
+                        ${adicionales.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
                     </div>
-                    <div class="info-section superficie">
-                        <h4>SUPERFICIE</h4>
-                        <div class="info-list">
-                            <span><i class="fas fa-ruler-combined"></i> ${prop.metrosCuadrados} m²</span>
-                        </div>
-                    </div>
-                    <div class="info-section espacios-adicionales">
-                        <h4>ESPACIOS Y ADICIONALES</h4>
-                        <div class="info-list">
-                            ${adicionales.map(f => `<span>${getFeatureIcon(f)} ${f}</span>`).join('')}
-                        </div>
-                    </div>
-                    <div class="info-section documentacion">
-                        <h4><i class="fas fa-file-alt"></i> ESTADO DE LA DOCUMENTACIÓN</h4>
-                        ${(() => {
-                            let doc = prop.documentacion;
-                            let antiguedadHtml = '';
-                            if (doc && doc.antiguedad) {
-                                antiguedadHtml = `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: ${doc.antiguedad}</span></div>`;
-                            } else if (antiguedadCarac) {
-                                antiguedadHtml = `<div class="doc-item completo"><i class="fas fa-hourglass-half"></i> <span>Antigüedad: En construcción</span></div>`;
-                            }
-                            return doc ? `
-                                <div class="doc-item ${doc.escrituras === 'En orden' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-file-contract"></i>
-                                    <span>Escrituras: ${doc.escrituras}</span>
-                                </div>
-                                <div class="doc-item ${doc.predial === 'Al corriente' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-receipt"></i>
-                                    <span>Predial: ${doc.predial}</span>
-                                </div>
-                                <div class="doc-item ${doc.servicios === 'Todos los servicios' ? 'completo' : 'pendiente'}">
-                                <i class="fas fa-plug"></i>
-                                    <span>Servicios: ${doc.servicios}</span>
-                                </div>
-                                ${antiguedadHtml}
-                            ` : '<p>Información de documentación no disponible</p>';
-                        })()}
+                </div>
+                <div class="info-section documentacion">
+                    <h4>📄 ESTADO DE LA DOCUMENTACIÓN</h4>
+                    ${(() => {
+                        let doc = prop.documentacion;
+                        let antiguedadHtml = '';
+                        if (doc && doc.antiguedad) {
+                            antiguedadHtml = `<div class="doc-item completo">⏳ <span>Antigüedad: ${doc.antiguedad}</span></div>`;
+                        } else if (antiguedadCarac) {
+                            antiguedadHtml = `<div class="doc-item completo">⏳ <span>Antigüedad: En construcción</span></div>`;
+                        }
+                        return doc ? `
+                            <div class="doc-item ${doc.escrituras === 'En orden' ? 'completo' : 'pendiente'}">
+                                📄 <span>Escrituras: ${doc.escrituras}</span>
+                            </div>
+                            <div class="doc-item ${doc.predial === 'Al corriente' ? 'completo' : 'pendiente'}">
+                                📋 <span>Predial: ${doc.predial}</span>
+                            </div>
+                            <div class="doc-item ${doc.servicios === 'Todos los servicios' ? 'completo' : 'pendiente'}">
+                                🔌 <span>Servicios: ${doc.servicios}</span>
+                            </div>
+                            ${antiguedadHtml}
+                        ` : '<p>Información de documentación no disponible</p>';
+                    })()}
                     </div>
                     <div class="info-section contacto" style="text-align:center; margin: 18px 0 0 0; display: flex; flex-direction: column; gap: 8px;">
                         <a href='https://wa.me/529981477653?text=Estoy%20interesado%20en%20${encodeURIComponent(prop.titulo)}%20-%20Contacto:%20mnieto@grn.com.mx' class='contact-button' style='background:#3498db;'><i class='fab fa-whatsapp'></i> Contactar</a>
@@ -764,43 +761,43 @@ export function getFeatureIcon(feature) {
 
     const featureLower = feature.toLowerCase();
 
-    // Usar includes con chequeos de acentos y variantes
+     // Usar includes con chequeos de acentos y variantes
     if (/(habitaci[oó]n|rec[aá]mara)/.test(featureLower)) {
-        return '<i class="fas fa-bed"></i>';
+        return '🛏️'; // Cama
     } else if (/(bañ[oó]|bano)/.test(featureLower)) {
-        return '<i class="fas fa-bath"></i>';
+        return '🚿'; // Ducha
     } else if (/(estacionamiento|cochera)/.test(featureLower)) {
-        return '<i class="fas fa-car"></i>';
+        return '🚗'; // Coche
     } else if (/piso(s)?/.test(featureLower)) {
-        return '<i class="fas fa-building"></i>';
+        return '🏢'; // Edificio
     } else if (/mantenimiento/.test(featureLower)) {
-        return '<i class="fas fa-tools"></i>';
+        return '🛠️'; // Herramientas
     } else if (/terraza/.test(featureLower)) {
-        return '<i class="fas fa-umbrella-beach"></i>';
+        return '🌞'; // Sol (para terraza)
     } else if (/(aire acondicionado|clima)/.test(featureLower)) {
-        return '<i class="fas fa-wind"></i>';
+        return '❄️'; // Copo de nieve
     } else if (/amueblado/.test(featureLower)) {
-        return '<i class="fas fa-couch"></i>';
+        return '🛋️'; // Sofá
     } else if (/(cocina|kitchen)/.test(featureLower)) {
-        return '<i class="fas fa-utensils"></i>';
+        return '🍳'; // Sartén con huevo
     } else if (/(elevador|ascensor)/.test(featureLower)) {
-        return '<i class="fas fa-arrow-up"></i>';
+        return '⬆️'; // Flecha arriba
     } else if (/(privado|seguridad)/.test(featureLower)) {
-        return '<i class="fas fa-shield-alt"></i>';
+        return '🔒'; // Candado
     } else if (/(alberca|piscina)/.test(featureLower)) {
-        return '<i class="fas fa-swimming-pool"></i>';
+        return '🏊'; // Nadador
     } else if (/(juegos|infantil)/.test(featureLower)) {
-        return '<i class="fas fa-gamepad"></i>';
+        return '🧸'; // Osito de peluche
     } else if (/(gimnasio|gym)/.test(featureLower)) {
-        return '<i class="fas fa-dumbbell"></i>';
+        return '💪'; // Bíceps
     } else if (/(jard[ií]n|jardin)/.test(featureLower)) {
-        return '<i class="fas fa-tree"></i>';
+        return '🌳'; // Árbol
     } else if (/(m[²2]|metros|superficie)/.test(featureLower)) {
-        return '<i class="fas fa-ruler-combined"></i>';
+        return '📐'; // Regla
     } else if (/(construcci[oó]n|obra)/.test(featureLower)) {
-        return '<i class="fas fa-hard-hat"></i>';
+        return '🏗️'; // Construcción
     } else {
-        return '<i class="fas fa-check-circle"></i>';
+        return '✅'; // Check en círculo
     }
 }
 
@@ -911,9 +908,9 @@ document.head.appendChild(galeriaEstilos);
 
 export function getMainFeatures(caracteristicas) {
     const icons = {
-        habitaciones: '<i class="fas fa-bed"></i>',
-        banos: '<i class="fas fa-bath"></i>',
-        metros: '<i class="fas fa-ruler-combined"></i>'
+        habitaciones: '🛏️', // Cama
+        banos: '🚿',       // Ducha
+        metros: '📐'       // Regla
     };
     let hab = caracteristicas.find(f => f.toLowerCase().includes('habita'));
     let ban = caracteristicas.find(f => f.toLowerCase().includes('baño') || f.toLowerCase().includes('baños'));
