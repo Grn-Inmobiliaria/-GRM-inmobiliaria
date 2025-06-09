@@ -31,6 +31,17 @@ input, textarea, select, button {
     user-select: text;
 }
 
+/* Soporte Safari para user-select */
+.no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.text-select {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
 body {
     font-family: var(--body-font);
     line-height: 1.6;
@@ -134,6 +145,7 @@ body {
     text-align: center;
     color: white;
     padding: 0 2rem;
+    margin-top: 100px;
 }
 
 .hero-content {
@@ -180,6 +192,7 @@ body {
 /* Secciones generales */
 section {
     padding: 5rem 2rem;
+    animation: fadeIn 1s ease-out;
 }
 
 section h2 {
@@ -1069,8 +1082,12 @@ footer {
     }
 }
 
-section {
-    animation: fadeIn 1s ease-out;
+.section-margin-top {
+    margin-top: 100px;
+}
+
+.hero-section {
+    margin-top: 100px;
 }
 
 /* Los estilos de modal se han movido a propiedades.css */

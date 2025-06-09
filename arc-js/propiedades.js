@@ -391,7 +391,7 @@ function actualizarMoneda() {
 // Modifica renderInmuebles para mostrar precios en la moneda seleccionada
 export function renderInmuebles(lista = inmuebles) {
     actualizarMoneda();
-    const grid = document.querySelector('.property-grid-detalle');
+    const grid = document.querySelector('.property-grid');
     if (!grid) {
         console.error('No se encontró el elemento grid');
         return;
@@ -771,44 +771,68 @@ function getAllFeatures(caracteristicas) {
 
 // Devuelve el ícono adecuado según la característica
 export function getFeatureIcon(feature) {
-    const featureLower = feature.toLowerCase();
-    if (featureLower.includes('habitacion') || featureLower.includes('recámara')) {
-        return '<i class="fas fa-bed"></i>';
-    } else if (featureLower.includes('baño')) {
-        return '<i class="fas fa-bath"></i>';
-    } else if (featureLower.includes('estacionamiento')) {
-        return '<i class="fas fa-car"></i>';
-    } else if (featureLower.includes('piso')) {
-        return '<i class="fas fa-building"></i>';
-    } else if (featureLower.includes('mantenimiento')) {
-        return '<i class="fas fa-tools"></i>';
-    } else if (featureLower.includes('terraza')) {
-        return '<i class="fas fa-umbrella-beach"></i>';
-    } else if (featureLower.includes('aire')) {
-        return '<i class="fas fa-wind"></i>';
-    } else if (featureLower.includes('amueblado')) {
-        return '<i class="fas fa-couch"></i>';
-    } else if (featureLower.includes('cocina')) {
-        return '<i class="fas fa-utensils"></i>';
-    } else if (featureLower.includes('elevador')) {
-        return '<i class="fas fa-arrow-up"></i>';
-    } else if (featureLower.includes('privado') || featureLower.includes('seguridad')) {
-        return '<i class="fas fa-shield-alt"></i>';
-    } else if (featureLower.includes('alberca')) {
-        return '<i class="fas fa-swimming-pool"></i>';
-    } else if (featureLower.includes('juegos')) {
-        return '<i class="fas fa-child"></i>';
-    } else if (featureLower.includes('gimnasio')) {
-        return '<i class="fas fa-dumbbell"></i>';
-    } else if (featureLower.includes('jardín') || featureLower.includes('jardin')) {
-        return '<i class="fas fa-tree"></i>';
-    } else if (featureLower.includes('m²') || featureLower.includes('metros')) {
-        return '<i class="fas fa-ruler-combined"></i>';
-    } else if (featureLower.includes('construcción') || featureLower.includes('construccion')) {
-        return '<i class="fas fa-hard-hat"></i>';
-    } else {
-        return '<i class="fas fa-check-circle"></i>';
+    const icons = {
+        'Habitaciones': '<i class="fas fa-bed"></i>',
+        'Habitación': '<i class="fas fa-bed"></i>',
+        'Baños': '<i class="fas fa-bath"></i>',
+        'Baño': '<i class="fas fa-bath"></i>',
+        'Piscina': '<i class="fas fa-swimmer"></i>',
+        'Jardín': '<i class="fas fa-tree"></i>',
+        'Terraza': '<i class="fas fa-umbrella-beach"></i>',
+        'Balcón': '<i class="fas fa-archway"></i>',
+        'Alberca': '<i class="fas fa-water"></i>',
+        'Vista al Mar': '<i class="fas fa-water"></i>',
+        'Terraza Privada': '<i class="fas fa-umbrella-beach"></i>',
+        'Área de BBQ': '<i class="fas fa-fire"></i>',
+        'Patio': '<i class="fas fa-leaf"></i>',
+        'Cerca del Mar': '<i class="fas fa-water"></i>',
+        'Estacionamiento': '<i class="fas fa-parking"></i>',
+        'Cine': '<i class="fas fa-film"></i>',
+        'Gimnasio': '<i class="fas fa-dumbbell"></i>',
+        'Muelle Privado': '<i class="fas fa-anchor"></i>',
+        'Cenote Privado': '<i class="fas fa-water"></i>',
+        'm²': '<i class="fas fa-ruler-combined"></i>',
+        'Amueblado': '<i class="fas fa-couch"></i>',
+        'Aire acondicionado': '<i class="fas fa-snowflake"></i>',
+        'Elevador': '<i class="fas fa-elevator"></i>',
+        'Fraccionamiento privado': '<i class="fas fa-city"></i>',
+        'Mantenimiento': '<i class="fas fa-coins"></i>',
+        'Piso': '<i class="fas fa-building"></i>',
+        'Seguridad 24 horas': '<i class="fas fa-shield-alt"></i>',
+        'Área de juegos infantiles': '<i class="fas fa-child"></i>',
+        'Roof top con jacuzzi y asadores': '<i class="fas fa-hot-tub"></i>',
+        'Cocina integral': '<i class="fas fa-utensils"></i>',
+        'Roof top': '<i class="fas fa-hot-tub"></i>',
+        'Jacuzzi': '<i class="fas fa-hot-tub"></i>',
+        'Asadores': '<i class="fas fa-fire"></i>',
+        'Seguridad': '<i class="fas fa-shield-alt"></i>',
+        'Juegos infantiles': '<i class="fas fa-child"></i>',
+        'Patio de juegos': '<i class="fas fa-child"></i>',
+        'Lavandería': '<i class="fas fa-tshirt"></i>',
+        'Family room': '<i class="fas fa-users"></i>',
+        'Bodega': '<i class="fas fa-warehouse"></i>',
+        'Business center': '<i class="fas fa-briefcase"></i>',
+        'Coworking': '<i class="fas fa-laptop-house"></i>',
+        'Spa': '<i class="fas fa-spa"></i>',
+        'Boliche': '<i class="fas fa-bowling-ball"></i>',
+        'Cancha': '<i class="fas fa-futbol"></i>',
+        'Golf': '<i class="fas fa-golf-ball"></i>',
+        'Ciclovía': '<i class="fas fa-bicycle"></i>',
+        'Área comercial': '<i class="fas fa-store"></i>',
+        'Pet park': '<i class="fas fa-dog"></i>',
+        'BBQ': '<i class="fas fa-fire"></i>'
+    };
+    // Normalización para variantes y sinónimos
+    const lower = feature.toLowerCase();
+    if (lower.includes('habitacion')) return icons['Habitaciones'];
+    if (lower.includes('baño')) return icons['Baños'];
+    if (lower.includes('m²')) return icons['m²'];
+    for (let key in icons) {
+        if (lower.includes(key.toLowerCase())) {
+            return icons[key];
+        }
     }
+    return '<i class="fas fa-check"></i>';
 }
 
 // Configurar los eventos de las tarjetas de propiedades

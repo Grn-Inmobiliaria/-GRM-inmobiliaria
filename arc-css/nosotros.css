@@ -25,8 +25,8 @@ body {
     padding: 3rem 2rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .nosotros-hero h2 {
@@ -802,9 +802,11 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6, p, span, a, ul, li, label, .nosotros-hero-content, .about-content, .footer-content, .navbar, .equipo, .equipo-grid, .miembro {
+    -webkit-user-select: none;
     user-select: none;
 }
 
 input, textarea, select, button {
+    -webkit-user-select: text;
     user-select: text;
 }
